@@ -1,0 +1,47 @@
+// hr{
+//     position: relative; 
+//     border: none; 
+//     height: 2px; 
+//     background: $secondary-color; 
+//     margin-bottom: 25px; 
+//.signin_form{ 
+form{
+    .google-btn{
+        margin-bottom: 25px; 
+    }
+    .btn-block{
+        padding:0.6em !important;
+    }
+    .form-group{
+        margin-bottom:1.5em !important;
+    }
+    label{
+        margin:0 !important;;
+        font-size:15px!important;
+    }
+    input{
+        background-color: $secondary-color !important;
+        border-radius: 0 !important;
+    }
+    ::placeholder{
+        font-size: 14px !important;
+    }
+    .sign {
+        text-decoration: none;
+        color: $primary-color !important;
+    
+        &:hover {
+          text-decoration: none;
+          color: $primary-color !important;
+        }
+    }
+    #a-link {
+        color: $secondary-color !important;
+    }
+    
+
+}
+
+$primary-color: #1A1B2D;
+$secondary-color: #fff;
+$tetiary-color: #f4f4f4;
