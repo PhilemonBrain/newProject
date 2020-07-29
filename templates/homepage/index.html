@@ -1,23 +1,7 @@
-{% extends 'home_template.html' %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
-  {% load static %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="assets/css/style.min.css">-->
-  <link rel="stylesheet" href="{% static 'assets/css/style.min.css' %}">
-  <title>Micro Api - Home</title>
-</head>
-
+{% extends 'homepage/base.html' %}
 
 {% block content %}
+{% load static %}
   <body id="home">
     
     <main>
@@ -119,7 +103,7 @@
                   <a href="#"><img class="img-fluid  item-ten__image-container__img" src="{% static 'assets/img/react-icon.png' %}"></a> 
                 </div>
                 <div>
-                  <a href="#"><img class="img-fluid  item-ten__image-container__img" src="{% static 'assets/img/ember-icon.png' %}"></a>
+                  <a href="#"><assets/ class="img-fluid  item-ten__image-container__img" src="{% static 'assets/img/ember-icon.png' %}"></a>
                 </div>
                 <div>
                   <a href="#"><img class="img-fluid  item-ten__image-container__img" src="{% static 'assets/img/angular-icon.png' %}"></a>
@@ -204,5 +188,3 @@
     <script src="{% static 'assets/js/nav.js' %}"></script>
   </body>
 {% endblock %}
-
-</html>
