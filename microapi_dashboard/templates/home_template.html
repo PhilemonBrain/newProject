@@ -5,33 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
+{% load static %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.min.css">
+<!--<link rel="stylesheet" href="assets/css/style.min.css">-->
+<link rel="stylesheet" href="{% static 'assets/css/style.min.css' %}">
 <title>Micro Api - Layout</title>
 </head>
 <body id="layout">
-  
+  <!--Other pages inherit the header and footer from this page-->
   <header>
     <!-- Write header here -->
     <div class="container">
       <div class="row pt-4 pb-4 header__wrapper">
         <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
-          <a href="#" class="logo"><img src="./assets/img/logo.svg" alt="site logo"></a>
+          <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.svg' %}" alt="site logo"></a>
         </div>
 
         <nav class="col-lg-6">
-          <ul class="nav__menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Documentation</a></li>
-          </ul>
-        </nav>
+			  <ul class="nav__menu">
+			  <li><a href="index.html">Home</a></li>
+			  <li><a href="about.html">About us</a></li>
+			  <li><a href="contact.html">Contact us</a></li>
+			  <li><a href="docs.html">Documentation</a></li>
+			</ul>
+		  </nav>
 
         <div class="col-lg-4 menu__button__container">
-          <a href="#"><button class="secondary-btn">Sign In</button></a>
-          <a href="#"><button class="primary-btn">Sign Up</button></a>
+          <a href="signin1.html" button class="secondary-btn">Sign In</button></a>
+          <a href="signup-1.html"><button class="primary-btn">Sign Up</button></a>
         </div>
 
         <div class="mobile__nav">
@@ -56,10 +58,11 @@
                 <li><a href="index.html"><b>Home</b></a></li>
                 <li><a href="about.html"><b>About us</b></a></li>
                 <li><a href="contact.html"><b>Contact us</b></a></li>
-                <li><a href="#"><b>Documentation</b></a></li>
+                <li><a href="docs.html"><b>Documentation</b></a></li>
                 <li><a href="signin1.html"><b>Sign in</b></a></li>
                 <li><a href="signup-1.html"><b>Sign Up</b></a></li>
                 <li>
+
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-instagram"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -67,7 +70,7 @@
               </ul>
 
               <div class="menu__logo">
-                <a href="#"><img src="./assets/img/logo.svg" alt=""></a>
+                <a href="#"><img src="{% static 'assets/img/logo.svg' %}" alt=""></a>
               </div>
             </nav>
           </div>
@@ -76,14 +79,17 @@
     </div>
   </header>
 
-  
+
+  {% block content %}
+  {% endblock %}
+
+
   <footer>
     <!-- Write footer here -->
-
     <div class="container pt-5 pb-5 footer__wrapper">
       <div class="footer__logo__container">
         <div class="footer__logo">
-          <a href="#"><img src="/assets/img/logo.svg" alt="footer logo"></a>
+          <a href="#"><img src="{% static 'assets/img/logo.svg' %}" alt="footer logo"></a>
         </div>
       </div>
 
@@ -91,9 +97,9 @@
         <div>
           <h6>Product</h6>
           <ul>
-            <li><a href="#">Authentication API</a></li>
+            <li><a href="auth.html">Authentication API</a></li>
             <li><a href="#">Models</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
 
@@ -108,8 +114,8 @@
         <div>
           <h6>Explore</h6>
           <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
           </ul>
         </div>
       </div>
@@ -119,6 +125,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="assets/js/nav.js"></script>
+<script src="{% static 'assets/js/nav.js' %}"></script>
 </body>
 </html>
