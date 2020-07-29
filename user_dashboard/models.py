@@ -11,11 +11,3 @@ class apiBox(models.Model):
 
     def __str__(self):
         return self.title
-
-class Project(models.Model):
-    name = models.CharField(max_length=255)
-    # user_id = models.ForeignKey(User, related_name='projects', on_delete=models.CASCADE)
-    token = models.UUIDField()
-
-    def __str__(self):
-        return self.name

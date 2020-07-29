@@ -25,7 +25,11 @@ SECRET_KEY = '=%%#64qx4@3(a-&y1g%heza3_5id!o_@qggzo$$(0@q4a61$cn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['*']
+=======
+ALLOWED_HOSTS = []
+>>>>>>> 44b6b99f4c6e74e775eab98b4a202fd8a912526a
 
 
 # Application definition
@@ -38,6 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 44b6b99f4c6e74e775eab98b4a202fd8a912526a
     #apps
     'homepage',
     'blog',
