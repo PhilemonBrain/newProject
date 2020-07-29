@@ -11,7 +11,6 @@
 <title>Micro Api - Hire a Consultant</title>
 </head>
 <body id="hire_consultant">
-
   <header>
     <!-- Write header here -->
     <div class="container">
@@ -19,7 +18,6 @@
         <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
           <a href="#" class="logo"><img src="./assets/img/logo.svg" alt="site logo"></a>
         </div>
-
         <nav class="col-lg-6">
           <ul class="nav__menu">
             <li><a href="index.html">Home</a></li>
@@ -28,19 +26,16 @@
             <li><a href="documentation.html">Documentation</a></li>
           </ul>
         </nav>
-
         <div class="col-lg-4 menu__button__container">
           <a href="signin1.html"><button class="secondary-btn">Sign In</button></a>
           <a href="signup-1.html"><button class="primary-btn">Sign Up</button></a>
         </div>
-
         <div class="mobile__nav">
           <div class="hamburger">
             <div></div>
             <div></div>
             <div></div>
           </div>
-
           <div class="mobile__menu">
             <nav class="nav">
               <div class="search__form">
@@ -51,7 +46,6 @@
                   <i class="fas fa-search"></i>
                 </div>
               </div>
-
               <ul class="mobile__nav__menu">
                 <li><a href="index.html"><b>Home</b></a></li>
                 <li><a href="about.html"><b>About us</b></a></li>
@@ -65,7 +59,6 @@
                   <a href="#"><i class="fab fa-twitter"></i></a>
                 </li>
               </ul>
-
               <div class="menu__logo">
                 <a href="#"><img src="./assets/img/logo.svg" alt=""></a>
               </div>
@@ -79,7 +72,6 @@
   
   <!-- Main body goes here -->
   <div class="navbody">
-
       <div class="docs_navbar">
             <div class="words">
                 <div class="doc_img">
@@ -97,7 +89,6 @@
                     <p  class="more">1234</p>
                 </div>
                 <div class="vl">
-
                 </div>
                 <div class="rating">
                     <p class="less">Ratings</p>
@@ -105,7 +96,6 @@
                 </div>
             </div>
       </div>
-
       <div class="itemlink">
             <div class="list-item">
                 <a class="item-link">Introduction</a>
@@ -126,7 +116,6 @@
             <div class="hire"><a  href="#">Hire a Consultant</a></div>
       </div>
 </div>
-
     <!-- Main section -->
     <div class="block">
         <div class="block__banner">
@@ -243,7 +232,6 @@
 	          <a href="#"><img src="./assets/img/logo.svg" alt="footer logo"></a>
 	        </div>
 	      </div>
-
 	      <div class="footer__menus__container">
 	        <div>
 	          <h6>Product</h6>
@@ -253,7 +241,6 @@
 	            <li><a href="faq.html">FAQ</a></li>
 	          </ul>
 	        </div>
-
 	        <div>
 	          <h6>Collaboration</h6>
 	          <ul>
@@ -261,7 +248,6 @@
 	            <li><a href="#">Track Changes</a></li>
 	          </ul>
 	        </div>
-
 	        <div>
 	          <h6>Explore</h6>
 	          <ul>
@@ -272,11 +258,10 @@
 	      </div>
 	    </div>
 	</footer>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="assets/js/nav.js"></script>
 <script type="text/javascript" src=""></script>
 </body>
-</html>
+</html>`

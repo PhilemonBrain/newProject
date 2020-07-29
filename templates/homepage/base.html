@@ -9,17 +9,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 <!--<link rel="stylesheet" href="assets/css/style.min.css">-->
-<link rel="stylesheet" ttype="text/css" href="{% static 'assets/css/style.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.min.css' %}">
 <title>Micro Api - Layout</title>
 </head>
-<body id="layout">
+<body>
   <!--Other pages inherit the header and footer from this page-->
   <header>
     <!-- Write header here -->
     <div class="container">
       <div class="row pt-4 pb-4 header__wrapper">
         <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
-          <a href="{% url 'homepage' %}" class="logo"><img src="{% static 'assets/img/logo.svg' %}" alt="site logo"></a>
+          <a href="index.html" class="logo"><img src="{% static 'img/logo.svg' %}" alt="site logo"></a>
         </div>
 
         <nav class="col-lg-6">
@@ -70,7 +70,7 @@
               </ul>
 
               <div class="menu__logo">
-                <a href="#"><img src="{% static 'assets/img/logo.svg' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo.svg' %}" alt=""></a>
               </div>
             </nav>
           </div>
@@ -89,7 +89,7 @@
     <div class="container pt-5 pb-5 footer__wrapper">
       <div class="footer__logo__container">
         <div class="footer__logo">
-          <a href="#"><img src="{% static 'assets/img/logo.svg' %}" alt="footer logo"></a>
+          <a href="#"><img src="{% static 'img/logo.svg' %}" alt="footer logo"></a>
         </div>
       </div>
 
@@ -125,6 +125,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="{% static 'assets/js/nav.js' %}"></script>
+<script src="{% static 'js/nav.js' %}"></script>
 </body>
 </html>

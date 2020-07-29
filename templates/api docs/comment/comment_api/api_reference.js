@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +10,13 @@
   <link rel="stylesheet" href="assets/css/style.min.css">
   <title>Micro Api - Documentation</title>
 </head>
-
 <body id="documentation">
-
   <header>
-
     <div class="container">
       <div class="row pt-4 pb-4 header__wrapper">
         <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
           <a href="index.html" class="logo"><img src="./assets/img/logo.svg" alt="site logo"></a>
         </div>
-
         <nav class="col-lg-6">
           <ul class="nav__menu">
             <li><a href="index.html">Home</a></li>
@@ -30,19 +25,16 @@
             <li><a href="docs.html">Documentation</a></li>
           </ul>
         </nav>
-
         <div class="col-lg-4 menu__button__container">
           <a href="signin1.html"><button class="secondary-btn">Sign In</button></a>
           <a href="signup-1.html"><button class="primary-btn">Sign Up</button></a>
         </div>
-
         <div class="mobile__nav">
           <div class="hamburger">
             <div></div>
             <div></div>
             <div></div>
           </div>
-
           <div class="mobile__menu">
             <nav class="nav">
               <div class="search__form">
@@ -53,7 +45,6 @@
                   <i class="fas fa-search"></i>
                 </div>
               </div>
-
               <ul class="mobile__nav__menu">
                 <li><a href="index.html"><b>Home</b></a></li>
                 <li><a href="about.html"><b>About us</b></a></li>
@@ -67,7 +58,6 @@
                   <a href="#"><i class="fab fa-twitter"></i></a>
                 </li>
               </ul>
-
               <div class="menu__logo">
                 <a href="#"><img src="./assets/img/logo.svg" alt=""></a>
               </div>
@@ -77,9 +67,6 @@
       </div>
     </div>
   </header>
-
-
-
   <!-- Main body goes here -->
   <main id="comment_main">
     <div class="container-fluidx">
@@ -93,7 +80,6 @@
                   fill="#121215" stroke="white" />
               </svg>
             </div>
-
             <div class="comment-api-content">
               <h1 class="commentapi-title">
                 Comment MicroAPI
@@ -115,7 +101,6 @@
               </h3>
             </div>
             <div class="v-divider"></div>
-
             <div class="col-lg-4 col-md-4 col-sm-5">
               <p class="rating-title">
                 Ratings
@@ -133,7 +118,6 @@
                       d="M14.5489 0.927048C14.8483 0.0057373 16.1517 0.00573993 16.4511 0.927051L19.2045 9.40122C19.3384 9.81324 19.7223 10.0922 20.1555 10.0922L29.0658 10.0922C30.0345 10.0922 30.4373 11.3318 29.6536 11.9012L22.445 17.1385C22.0945 17.3932 21.9479 17.8446 22.0818 18.2566L24.8352 26.7308C25.1345 27.6521 24.0801 28.4182 23.2963 27.8488L16.0878 22.6115C15.7373 22.3568 15.2627 22.3568 14.9122 22.6115L7.70365 27.8488C6.91994 28.4182 5.86546 27.6521 6.16481 26.7307L8.91824 18.2566C9.05211 17.8446 8.90545 17.3932 8.55497 17.1385L1.34641 11.9012C0.562692 11.3318 0.96547 10.0922 1.93419 10.0922L10.8445 10.0922C11.2777 10.0922 11.6616 9.81324 11.7955 9.40122L14.5489 0.927048Z"
                       fill="#121215" />
                   </svg>
-
                 </span>
                 <span class="number">
                   4.6
@@ -144,44 +128,25 @@
         </div>
       </div>
     </div>
-
-
-
     <div class="ms-links-div">
-
       <div class="row1">
         <a href="#" class="ms-links">Introduction</a>
-
         <a href="./documentation.html" class="ms-links">API Reference</a>
-
       </div>
-
       <div class="row2">
         <a href="#" class="ms-links">Video Guide</a>
-
         <a href="#" class="ms-links active">Tutorial</a>
-
       </div>
-
-
     </div>
-
-
     <div class="row no-wrap second-menu">
-
       <button class="menu__btn" id="bugger" onclick="showMoreLinks(event, 'other__links_div', 'more__links_div')">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
       <!-- <button id="more__links" onclick="showMoreLinks(event,'more__links_div', 'other__links_div')">
         More <span></span>
     </button> -->
-
-
-
-
       <div class="col-lg-9 col-md-9 col-sm-12 m-hide">
         <!-- <div class="containr"> -->
         <ul class="links">
@@ -190,24 +155,19 @@
           <li class="s-links "><a href="#">Video Guide</a></li>
           <li class="s-links active"><a href="#">Tutorial</a></li>
         </ul>
-
         <!-- </div> -->
       </div>
-
       <div class="col-lg-2 col-md-3 col-sm-12 m-hidex">
         <a href="hire_consultant.html" class="hire">Hire a Consultant</a>
       </div>
-
     </div>
   </main>
-
   <div class="d-flex my-5">
     <section class="side__nav">
       <div class="input__div">
         <i class="fa fa-search"></i>
         <input type="search" name="search" placeholder="Search">
       </div>
-
       <p class="mt-3" data-toggle="collapse" data-target="#get_started" aria-expanded="false"
         aria-controls="collapseExample">
         Get Started
@@ -221,7 +181,6 @@
           <li><a href="#">MIT</a></li>
         </ul>
       </div>
-
       <p><a href="#">Microservice Admins</a></p>
       <p><a href="#">Organizations</a></p>
       <p><a href="#">Admins</a></p>
@@ -237,9 +196,7 @@
       <p><a href="#">Trouble Shooting/Security</a></p>
       <p><a href="#">Tutorials</a></p>
     </section>
-
     <section class="container">
-
       <section>
         <div>
           <h2>API Reference</h2>
@@ -272,7 +229,6 @@
           </h5>
         </div>
       </section>
-
       <section class="get__started">
         <h3>Get Started</h3>
         <h5>How To Use</h5>
@@ -283,7 +239,6 @@
         <p>Use <span><a href="#">appToken</a></span> generated when creating application on all Comments and Repies
           endpoints</p>
       </section>
-
       <section>
         <h3>Video Guide</h3>
         <p>The Comment API gives the developer access to built-in functionalities for when they want to implement
@@ -298,7 +253,6 @@
           Your browser does not support the video tag.
         </video>
       </section>
-
       <section class="my-4">
         <h3>Tutorial</h3>
         <p>
@@ -307,13 +261,11 @@
           update, and deletion of comments and replies while ensuring that only users authorized are allowed to
           use such functionalities. Additionally, there are extra features such as filtering, sorting, voting, and
           flagging available.<br><br>
-
           The Comment API gives the developer access to built-in functionalities for when they want to implement
           comments and replies within their own application. Basic functionalities are available for creation,
           update, and deletion of comments and replies while ensuring that only users authorized are allowed to
           use such functionalities. Additionally, there are extra features such as filtering, sorting, voting, and
           flagging available.<br><br>
-
           The Comment API gives the developer access to built-in functionalities for when they want to implement
           comments and replies within their own application. Basic functionalities are available for creation,
           update, and deletion of comments and replies while ensuring that only users authorized are allowed to
@@ -324,18 +276,14 @@
     </section>
   </div>
   </main>
-
-
   <footer>
     <!-- Write footer here -->
-
     <div class="container pt-5 pb-5 footer__wrapper">
       <div class="footer__logo__container">
         <div class="footer__logo">
           <a href="#"><img src="./assets/img/logo.svg" alt="footer logo"></a>
         </div>
       </div>
-
       <div class="footer__menus__container">
         <div>
           <h6>Product</h6>
@@ -345,7 +293,6 @@
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
-
         <div>
           <h6>Collaboration</h6>
           <ul>
@@ -353,7 +300,6 @@
             <li><a href="#">Track Changes</a></li>
           </ul>
         </div>
-
         <div>
           <h6>Explore</h6>
           <ul>
@@ -364,12 +310,10 @@
       </div>
     </div>
   </footer>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="assets/js/nav.js"></script>
   <script src="assets/js/setup-comment-api.js"></script>
 </body>
-
 </html>
