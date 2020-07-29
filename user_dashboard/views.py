@@ -10,4 +10,4 @@ class DashboardView(ListView):
     def get_context_data(self, **kwargs):
         context = super(DashboardView, self).get_context_data(**kwargs)
         context['queryset'] = apiBox.objects.all()
-        return context
+        return context 
