@@ -22,3 +22,6 @@ def contact_us(request):
 # Views to FAQ
 def faq(request):
     return render(request, 'homepage/faq.html')
+
+def signin(request):
+    return render(request, 'accounts/sign_in.html')
