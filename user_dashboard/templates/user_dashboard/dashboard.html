@@ -101,12 +101,13 @@
                 <article class="dropBox">
                   
                   <!-- Single box -->
+                  {% for context in object_list %}
                   <div class="dragBox">
                     <div class="api__box">
                       <div class="api__box__shadow">
                         <div class="api__box__inner">
                           <div class="api__box__heading">
-                              <h5>Blog API</h5>  
+                              <h5>{{ context.title }}</h5>  
                               <!-- toggle -->
                               <div class="pretty p-switch p-fill">
                                 <input type="checkbox" />
@@ -116,11 +117,11 @@
                               </div>  
                           </div>
                           <div class="api__box__text">
-                            <small>Services give funtionality to implement comments</small>
+                            <small>{{ context.description }}</small>
                           </div>
                           <div class="api__box__stats">
                             <p>Stats <br>
-                              <span>3rq/hr</span>
+                              <span>{{ context.stats }}</span>
                             </p>
                           </div>
                           <div class="api__box__buttons">
@@ -141,133 +142,7 @@
                       </div>
                     </div>
                   </div> <!-- Single box end -->
-
-                  <!-- Single box -->
-                  <div class="dragBox">
-                    <div class="api__box">
-                      <div class="api__box__shadow">
-                        <div class="api__box__inner">
-                          <div class="api__box__heading">
-                              <h5>Email API</h5>  
-                              <!-- toggle -->
-                              <div class="pretty p-switch p-fill">
-                                <input type="checkbox" />
-                                <div class="state p-success">
-                                    <label></label>
-                                </div>
-                              </div>  
-                          </div>
-                          <div class="api__box__text">
-                            <small>Services give funtionality to implement comments</small>
-                          </div>
-                          <div class="api__box__stats">
-                            <p>Stats <br>
-                              <span>5rq/hr</span>
-                            </p>
-                          </div>
-                          <div class="api__box__buttons">
-                            <a href="#"><button class="primary-btn">Configure</button></a>
-                            <!-- <input type="radio" name="" id=""> -->
-                            <!-- success -->
-                            <div class="pretty p-default p-round p-toggle">
-                              <input type="checkbox" />
-                              <div class="state p-success p-on">
-                                  <label></label>
-                              </div>
-                              <div class="state p-danger p-off">
-                                  <label></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- Single box end -->
-
-                  <!-- Single box -->
-                  <div class="dragBox">
-                    <div class="api__box">
-                      <div class="api__box__shadow">
-                        <div class="api__box__inner">
-                          <div class="api__box__heading">
-                              <h5>Auth API</h5>  
-                              <!-- toggle -->
-                              <div class="pretty p-switch p-fill">
-                                <input type="checkbox" />
-                                <div class="state p-success">
-                                    <label></label>
-                                </div>
-                              </div>  
-                          </div>
-                          <div class="api__box__text">
-                            <small>Services give funtionality to implement comments</small>
-                          </div>
-                          <div class="api__box__stats">
-                            <p>Stats <br>
-                              <span>86rq/hr</span>
-                            </p>
-                          </div>
-                          <div class="api__box__buttons">
-                            <a href="#"><button class="primary-btn">Configure</button></a>
-                            <!-- <input type="radio" name="" id=""> -->
-                            <!-- success -->
-                            <div class="pretty p-default p-round p-toggle">
-                              <input type="checkbox" />
-                              <div class="state p-success p-on">
-                                  <label></label>
-                              </div>
-                              <div class="state p-danger p-off">
-                                  <label></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- Single box end -->
-
-                  <!-- Single box -->
-                  <div class="dragBox">
-                    <div class="api__box">
-                      <div class="api__box__shadow">
-                        <div class="api__box__inner">
-                          <div class="api__box__heading">
-                              <h5>User API</h5>  
-                              <!-- toggle -->
-                              <div class="pretty p-switch p-fill">
-                                <input type="checkbox" />
-                                <div class="state p-success">
-                                    <label></label>
-                                </div>
-                              </div>  
-                          </div>
-                          <div class="api__box__text">
-                            <small>Services give funtionality to implement comments</small>
-                          </div>
-                          <div class="api__box__stats">
-                            <p>Stats <br>
-                              <span>3rq/hr</span>
-                            </p>
-                          </div>
-                          <div class="api__box__buttons">
-                            <a href="#"><button class="primary-btn">Configure</button></a>
-                            <!-- <input type="radio" name="" id=""> -->
-                            <!-- success -->
-                            <div class="pretty p-default p-round p-toggle">
-                              <input type="checkbox" />
-                              <div class="state p-success p-on">
-                                  <label></label>
-                              </div>
-                              <div class="state p-danger p-off">
-                                  <label></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- Single box end -->
-
+                  {% endfor %}
                 </article>
 
                 <div class="search-box">

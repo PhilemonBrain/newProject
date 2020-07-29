@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from homepage.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('homepage_static_views.urls')),
+    path('', HomeView.as_view(), name='homepage'),
+    # path('blog/', include('blog')),
+    # path('accounts/', include('accounts')),
     path('dashboard/', include('user_dashboard.urls'))
 ]
