@@ -11,3 +11,6 @@ class DashboardView(ListView):
         context = super(DashboardView, self).get_context_data(**kwargs)
         context['queryset'] = apiBox.objects.all()
         return context
+
+class ConfigureApiView(TemplateView):
+    template_name = 'user_dashboard/configure_api.html'
