@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'blog',
     'user_dashboard',
     'accounts',
+    'api_docs',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            './templates', os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,7 +127,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+=======
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+>>>>>>> c8021a10559e42ed1b23e6f50f2fe69bae1fb806
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/assets'),
 )
