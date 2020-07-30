@@ -9,10 +9,10 @@
         <h1 class="text-center"><strong>Sign Up</strong></h1>
         <br />
 
-        <form action="/action_page.php">
+        <form action="/action_page.php" id="sign_form">
           <div class="google-btn">
             <button type="submit" class="primary-btn btn-block">
-              <strong>G</strong> Continue with Google
+              <img src="{% static 'img/google_logo.png' %}"/> Continue with Google
             </button>
           </div>
           <div class="form-group">
@@ -41,7 +41,7 @@
           </div>
           <div class="form-group">
             <label for="pwd">PASSWORD</label>
-            <input type="password" class="form-control" value="" />
+            <input type="password" class="form-control" />
           </div>
           <button type="submit" class="btn btn-block tetiary-btn">
             Sign up

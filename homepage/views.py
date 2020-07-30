@@ -3,9 +3,13 @@ from django.views.generic import TemplateView
 # Create your views here.
 
 
-# Home page view
-class HomeView(TemplateView):
-    template_name = "homepage/index.html"
+# # Home page view
+# class HomeView(TemplateView):
+#     template_name = "homepage/index.html"
+
+# # Home page view
+def index(request):
+    return render(request, 'homepage/index.html')
 
 
 # About us view
@@ -30,3 +34,16 @@ def signin(request):
 #views to sign up
 def signup(request):
     return render(request, 'accounts/sign_up.html')
+
+
+#views to recover password
+def recover_password(request):
+    return render(request, 'accounts/recover_password.html')
+
+#views to recover password
+def reset_link(request):
+    return render(request, 'accounts/reset_link_sent.html')
+
+#views to recover password
+def reset_password(request):
+    return render(request, 'accounts/reset_password.html')
