@@ -31,7 +31,7 @@
 			  <li><a href="{% url 'homepage' %}">Home</a></li>
 			  <li><a href="{% url 'about' %}">About us</a></li>
 			  <li><a href="{% url 'contact' %}">Contact us</a></li>
-			  <li><a href="docs.html">Documentation</a></li>
+			  <li><a href="{% url 'docs' %}">Documentation</a></li>
 			</ul>
 		  </nav>
 
@@ -62,7 +62,7 @@
                 <li><a href="{% url 'homepage' %}"><b>Home</b></a></li>
                 <li><a href="{% url 'about' %}"><b>About us</b></a></li>
                 <li><a href="{% url 'contact' %}"><b>Contact us</b></a></li>
-                <li><a href="docs.html"><b>Documentation</b></a></li>
+                <li><a href="{% url 'docs' %}"><b>Documentation</b></a></li>
                 <li><a href="signin1.html"><b>Sign in</b></a></li>
                 <li><a href="signup-1.html"><b>Sign Up</b></a></li>
                 <li>
@@ -154,16 +154,18 @@
     <div class="ms-links-div">
 
       <div class="row1">
-        <a href="#" class="ms-links">Introduction</a>
+        <a href="#" class="ms-links active">Introduction</a>
 
         <a href="#" class="ms-links">API Reference</a>
+
+        <a href="#" class="ms-links">Endpoints</a>
 
       </div>
 
       <div class="row2">
-        <a href="#" class="ms-links">Video Guide</a>
+        <!-- <a href="#" class="ms-links">Video Guide</a> -->
 
-        <a href="#" class="ms-links active">Tutorial</a>
+        <a href="#" class="ms-links">Tutorial</a>
 
       </div>
 
@@ -182,17 +184,18 @@
       <div class="col-lg-9 col-md-9 col-sm-12 m-hide">
         <!-- <div class="containr"> -->
         <ul class="links">
-          <li class="s-links "><a href="#">Introduction</a></li>
+          <li class="s-links active"><a href="#">Introduction</a></li>
           <li class="s-links "><a href="#">API Reference</a></li>
-          <li class="s-links "><a href="#">Video Guide</a></li>
-          <li class="s-links active"><a href="#">Tutorial</a></li>
+          <li class="s-links "><a href="#">Endpoints</a></li>
+          <!-- <li class="s-links "><a href="#">Video Guide</a></li> -->
+          <li class="s-links"><a href="#">Tutorial</a></li>
         </ul>
 
         <!-- </div> -->
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-12 m-hidex">
-        <a href="#" class="hire">Hire a Consultant</a>
+        <a href="{% url 'consultant' %}" class="hire">Hire a Consultant</a>
       </div>
 
     </div>

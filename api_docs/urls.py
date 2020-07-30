@@ -3,5 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    #path('api/', views.api_view)
+    path('docs/comment_api', views.docs, name="docs"),
+    path('docs/consultant', views.consultant, name="consultant")
 ]
