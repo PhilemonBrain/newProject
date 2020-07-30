@@ -1,7 +1,8 @@
-{% extends 'doc_base.html' %}
+{% extends 'api_docs/comment_api/docs_base.html' %}
 
 
 {% block content %}
+
 {% load static %}
   <!-- Main body goes here -->
   <article class="getstarted">
@@ -14,17 +15,17 @@
 
       <div class="code">
       <div>
-        <img src="{% static 'assets/img/Group 638.png' %}" alt="no-code tool"/>
+        <img src="{% static 'img/Group 638.png' %}" alt="no-code tool"/>
         <p> No-Code Tool</p>
       </div>
       <div class="v2"></div>
       <div>
-          <img src="{% static 'assets/img/solution 1.png' %}" alt="no-code tool"/>
+          <img src="{% static 'img/solution 1.png' %}" alt="no-code tool"/>
           <p> Easy Integration</p>
         </div>
         <div class="v2"></div>
         <div>
-            <img src="{% static 'assets/img/bolt 1.png' %}" alt="no-code tool"/>
+            <img src="{% static 'img/bolt 1.png' %}" alt="no-code tool"/>
             <p> Fast Implementation</p>
           </div>
       </div>
@@ -34,12 +35,12 @@
   <article class="frameworks">
     <p>Seamless integration with your favourite frameworks</p>
   <div class="frame_img">
-    <img src="{% static 'assets/img/flutter_wave 1.png' %}" alt="next"/>
-    <img src="{% static 'assets/img/reacticon 2.png' %}" alt="react"/>
-    <img src="{% static 'assets/img/ember-icon.png' %}" alt="ember"/>
-    <img src="{% static 'assets/img/vuelog.png' %}" alt="Vue"/> 
-    <img src="{% static 'assets/img/angularicon2.jpg' %}" alt="Angular"/>
-    <img src="{% static 'assets/img/gatsby-icon.png' %}" alt="Gatsby"/>
+    <img src="{% static 'img/flutter_wave 1.png' %}" alt="next"/>
+    <img src="{% static 'img/reacticon 2.png' %}" alt="react"/>
+    <img src="{% static 'img/ember-icon.png' %}" alt="ember"/>
+    <img src="{% static 'img/vuelog.png' %}" alt="Vue"/> 
+    <img src="{% static 'img/angularicon2.jpg' %}" alt="Angular"/>
+    <img src="{% static 'img/gatsby-icon.png' %}" alt="Gatsby"/>
     
   </div>
   </article>
@@ -94,8 +95,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="{% static 'assets/js/nav.js' %}"></script>
-  <script src="{% static 'assets/js/setup-comment-api.js' %}"></script>
+  <script src="{% static 'js/nav.js' %}"></script>
+  <script src="{% static 'js/setup-comment-api.js' %}"></script>
 
   </body>
 {% endblock %}
