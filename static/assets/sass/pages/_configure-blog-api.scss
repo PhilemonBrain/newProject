@@ -229,7 +229,7 @@
                                 font-size: 14px;
                                 line-height: 16px;
                                 color: #5E5E66;
-                                padding: 4px 0px;
+                                padding: 8px 0px;
                                 &:hover{
                                     color: #6E8B41;
                                 }
@@ -379,17 +379,27 @@
         .configure_blog{
             &__main{
                 .configure_blog_sect1__cont2 {
-                    &__apigraph__cont{
-                        .apistatus{
-                            padding: 2px 12px;
-                            font-size: 12px;
-                        }
-                        .apistats{
-                            padding: 2px 10px;
-                            font-size: 12px;
+                    h2,p{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                    &__apigraph{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        &__cont{
+                            .apistatus{
+                                padding: 2px 12px;
+                                font-size: 12px;
+                            }
+                            .apistats{
+                                padding: 2px 10px;
+                                font-size: 12px;
+                            }
                         }
                     }
                     form{
+                        margin-left: 10px;
+                        margin-right: 10px;
                         .box_small{
                             width: 80%;
                             &--modifier3, &--modifier2, &--modifier5{

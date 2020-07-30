@@ -152,13 +152,11 @@
    
     header{
       // position: absolute;
-      height: 11.2vh;
+      //height: 11.2vh;
       border-bottom: 1px solid #DADADA;
       width: 100%;
-      padding: 10px 40px 10px 10px;
+      padding: 5px 40px 5px 10px;
       overflow: hidden;
-      display: flex;
-      justify-content: flex-end;
       align-items: center;
 
       .menu{
