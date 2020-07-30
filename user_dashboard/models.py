@@ -11,8 +11,6 @@ class apiBox(models.Model):
 
     def __str__(self):
         return self.title
-<<<<<<< HEAD
-=======
 
 class Project(models.Model):
     name = models.CharField(max_length=255)
@@ -21,4 +19,3 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
->>>>>>> 4089fc8986c5b3fd5deef63645f8ad3f04b2b6ee
