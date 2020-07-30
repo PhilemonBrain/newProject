@@ -41,3 +41,18 @@ def signin(request):
 def signup(request):
     return render(request, 'accounts/sign_up.html')
 
+<<<<<<< HEAD
+=======
+
+#views to recover password
+def recover_password(request):
+    return render(request, 'accounts/recover_password.html')
+
+#views to recover password
+def reset_link(request):
+    return render(request, 'accounts/reset_link_sent.html')
+
+#views to recover password
+def reset_password(request):
+    return render(request, 'accounts/reset_password.html')
+>>>>>>> 77046de527a6278477414a2ef74a9803ea8ac3c6
