@@ -1,5 +1,5 @@
-#docs {
-  //write inside here only
+// // #endpoint {
+//   //write inside here only
 
   $border-color: #c6c6c6;
   $font-color: #646464;
@@ -8,191 +8,188 @@
   $orange: #ff4500;
   $black: #000000;
 
-  * {
-    overflow: hidden;
-    box-sizing: border-box;
-  }
+//   * {
+//     overflow: hidden;
+//     box-sizing: border-box;
+//   }
 
-  .doc__header {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: solid 1px $border-color;
+//   .doc__header {
+//     margin-top: 3rem;
+//     padding-top: 2rem;
+//     padding-bottom: 2rem;
+//     border-bottom: solid 1px $border-color;
 
-    .doc__rating,
-    .doc__users {
-      text-align: center;
-      padding: 0 1rem;
+//     .doc__rating,
+//     .doc__users {
+//       text-align: center;
+//       padding: 0 1rem;
 
-      span {
-        color: $font-color;
-      }
+//       span {
+//         color: $font-color;
+//       }
 
-      span:nth-child(2) {
-        font-size: 1.2rem;
-        font-weight: bolder;
-      }
-    }
+//       span:nth-child(2) {
+//         font-size: 1.2rem;
+//         font-weight: bolder;
+//       }
+//     }
 
-    .doc__users {
-      border-right: solid 1px $border-color;
-    }
-  }
+//     .doc__users {
+//       border-right: solid 1px $border-color;
+//     }
+//   }
 
-  .active {
-    border-bottom: solid 4px $theme-color;
-  }
+//   .active {
+//     border-bottom: solid 4px $theme-color;
+//   }
 
-  .help {
-    border-bottom: solid 1px $border-color;
+//   .help {
+//     border-bottom: solid 1px $border-color;
 
-    .tabs {
-      .active {
-        border-bottom: solid 4px $theme-color;
-      }
+//     .tabs {
+//       .active {
+//         border-bottom: solid 4px $theme-color;
+//       }
 
-      .tab {
-        p {
-          margin: 0;
-          line-height: 4rem;
-        }
-      }
+//       .tab {
+//         p {
+//           margin: 0;
+//           line-height: 4rem;
+//         }
+//       }
 
-      .tab:hover {
-        border-bottom: solid 4px $theme-color;
-      }
-    }
+//       .tab:hover {
+//         border-bottom: solid 4px $theme-color;
+//       }
+//     }
 
-    a {
-      color: $theme-color;
-    }
-  }
+//     a {
+//       color: $theme-color;
+//     }
+//   }
 
-  .tab__content__container {
-    // font-size: 1.2rem;
+//     #intro {
+//       div {
+//         div.attributes {
+//           .attribute {
+//             min-height: 12rem;
 
-    #intro {
-      div {
-        div.attributes {
-          .attribute {
-            min-height: 12rem;
+//             img {
+//               width: 90%;
+//               height: 90%;
+//               margin: auto;
+//             }
+//           }
+//         }
+//       }
+//     }
 
-            img {
-              width: 90%;
-              height: 90%;
-              margin: auto;
-            }
-          }
-        }
-      }
-    }
+//     .integration {
+//       background: $border-color;
 
-    .integration {
-      background: $border-color;
+//       p {
+//         color: $black;
+//       }
 
-      p {
-        color: $black;
-      }
+//       .int {
+//         img {
+//           width: 70%;
+//           height: 70%;
+//           margin: auto;
+//         }
+//       }
+//     }
 
-      .int {
-        img {
-          width: 70%;
-          height: 70%;
-          margin: auto;
-        }
-      }
-    }
+//     #features {
+//       .feature {
+//         border: solid 1px $font-color;
+//         padding: 2rem;
+//         margin: 1rem 0;
 
-    #features {
-      .feature {
-        border: solid 1px $font-color;
-        padding: 2rem;
-        margin: 1rem 0;
+//         a {
+//           background: $font-color;
+//           color: $black;
+//         }
+//       }
+//     }
 
-        a {
-          background: $font-color;
-          color: $black;
-        }
-      }
-    }
+//     #trial {
+//       .subform {
+//         input {
+//           width: 70%;
+//           height: 2.5rem;
+//           margin-right: 2%;
+//         }
 
-    #trial {
-      .subform {
-        input {
-          width: 70%;
-          height: 2.5rem;
-          margin-right: 2%;
-        }
+//         button {}
+//       }
+//     }
 
-        button {}
-      }
-    }
+//     .refNav {
+//       .ref__search__form {
+//         width: 100%;
+//         height: 2.5rem;
+//         margin: auto;
+//         padding-right: 2%;
+//         background-color: $secondary-color;
+//         border: solid 1px $border-color;
+//         border-radius: 5px;
 
-    .refNav {
-      .ref__search__form {
-        width: 100%;
-        height: 2.5rem;
-        margin: auto;
-        padding-right: 2%;
-        background-color: $secondary-color;
-        border: solid 1px $border-color;
-        border-radius: 5px;
+//         button,
+//         input {
+//           height: 100%;
+//           background: $secondary-color;
+//           border: transparent;
+//         }
 
-        button,
-        input {
-          height: 100%;
-          background: $secondary-color;
-          border: transparent;
-        }
+//         button {
+//           padding: 0 2%;
+//           background: $border-color;
 
-        button {
-          padding: 0 2%;
-          background: $border-color;
+//           span {
+//             margin-top: 0.5rem;
+//           }
 
-          span {
-            margin-top: 0.5rem;
-          }
+//           &:hover {
+//             background: $hover-bg;
+//             color: $secondary-color;
+//           }
+//         }
 
-          &:hover {
-            background: $hover-bg;
-            color: $secondary-color;
-          }
-        }
+//         input {
+//           outline: none;
+//         }
+//       }
 
-        input {
-          outline: none;
-        }
-      }
+//       .refNav__links {
+//         margin-top: 2rem;
 
-      .refNav__links {
-        margin-top: 2rem;
+//         li {
+//           list-style: none;
 
-        li {
-          list-style: none;
+//           .refNav__link__text {
+//             color: $black;
+//           }
+//         }
 
-          .refNav__link__text {
-            color: $black;
-          }
-        }
+//         .more {
+//           display: block;
+//           cursor: pointer;
+//         }
 
-        .more {
-          display: block;
-          cursor: pointer;
-        }
+//         .more__content {
+//           height: none;
 
-        .more__content {
-          height: none;
+//           li {
+//             a {
+//               display: block;
+//               width: 100%;
+//               color: $font-color;
+//             }
+//           }
 
-          li {
-            a {
-              display: block;
-              width: 100%;
-              color: $font-color;
-            }
-          }
-
-          animation: all 1s;
-        }
+//           animation: all 1s;
+//         }
 
         // li.refNav__link {
         //   display: block;
@@ -233,25 +230,25 @@
         //     color: $font-color;
         //     margin: 0.5rem;
         //   }
-        // }
-      }
-    }
+    //     // }
+    //   }
+    // }
 
-    .refIntro {
-      a {
-        color: $theme-color;
-      }
+    // .refIntro {
+    //   a {
+    //     color: $theme-color;
+    //   }
 
-      .signupSteps {
-        background: #e5e5e5;
+    //   .signupSteps {
+    //     background: #e5e5e5;
 
-        ol {
-          li {
-            list-style-type: decimal;
-          }
-        }
-      }
-    }
+    //     ol {
+    //       li {
+    //         list-style-type: decimal;
+    //       }
+    //     }
+    //   }
+    // }
 
     .start {
       a {
@@ -519,5 +516,5 @@
         }
       }
     }
-  }
-}
+
+// }
