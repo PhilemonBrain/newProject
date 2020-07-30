@@ -23,10 +23,3 @@ def contact_us(request):
 def faq(request):
     return render(request, 'homepage/faq.html')
 
-# Views to docs
-def docs(request):
-    return render(request, 'api_docs/comment_api/comment_doc.html')
-
-# Views to hire consultant
-def consultant(request):
-    return render(request, 'api_docs/comment_api/api_hire_consultant.html')
