@@ -50,6 +50,7 @@
     .api__box__text {
       padding: 0.7rem 0 0.9rem;
       line-height: 1;
+      cursor: move;
 
       small {
         font-family: "gilroysemibold";
@@ -58,6 +59,7 @@
 
     .api__box__stats {
       color: lighten($color: $primary-color, $amount: 30);
+       cursor: move;
 
       span {
         color: $primary-color;
@@ -88,6 +90,34 @@
     }
   }
 }
+
+
+
+.inactive-row {
+  .api__box {
+
+    &__inner {
+  
+      .api__box__stats {
+        opacity: 0;
+      }
+  
+      .api__box__heading {
+        .pretty {
+          display: none;
+        }
+      }
+  
+      .api__box__buttons {
+        .pretty {
+          display: none;
+        }
+      }
+  
+    }
+  }
+}
+
 
 
 
@@ -138,20 +168,21 @@
   .dragBox {
     border-radius: 5px;
     display: inline-block;
-    width: 23%;
-    margin: 1%;
+    // width: 23%;
+    width: 220px;
+    margin: 3px;
     z-index: 5;
   }
 
   @media (max-width: $breakpoint-tablet) {
     .dragBox {
-      width: 48%;
+      width: 48% !important;
     }
   }
   
   @media (max-width: $breakpoint-phone) {
     .dragBox {
-      width: 100%;
+      width: 100% !important;
     }
   }
 
@@ -182,7 +213,7 @@
         padding: 0 1rem;
 
         i {
-          margin-right: 3%;
+          margin-right: 6px;
           color: darken($color: $tetiary-color, $amount: 40);
         }
 
