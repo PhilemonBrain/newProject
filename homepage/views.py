@@ -29,3 +29,6 @@ def signin(request):
 # Views to docs
 def docs(request):
     return render(request, 'api_docs/comment_api/comment_doc.html')
+#views to sign up
+def signup(request):
+    return render(request, 'accounts/sign_up.html')
