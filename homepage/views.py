@@ -1,13 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-# Create your views here.
+from django.core.mail import send_mail
+from django.conf import settings
 
-
-# # Home page view
-# class HomeView(TemplateView):
-#     template_name = "homepage/index.html"
-
-# # Home page view
+# Home page view
 def index(request):
     return render(request, 'homepage/index.html')
 
@@ -19,8 +14,19 @@ def about(request):
 
 # Contact us page
 def contact_us(request):
-    context = {}
-    return render(request, 'homepage/contact.html', context)
+    if request.method == "POST":
+        if request.POST.get("submit"):
+            name = request.POST.get("name")
+            email = request.POST.get("email")
+            sender = settings.EMAIL_HOST_USER
+            message = request.POST.get("message")
+            admin = ""
+
+            if name and email and message:
+                send_mail(
+                    email, message, name, [admin]
+                )
+    return render(request, 'homepage/contact.html')
 
 
 # Views to FAQ
@@ -34,3 +40,4 @@ def signin(request):
 #views to sign up
 def signup(request):
     return render(request, 'accounts/sign_up.html')
+
