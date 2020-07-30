@@ -120,9 +120,7 @@
                         display:inline-block;
                         width: 33%;
                         margin: 15px 0px;
-                        *{
-                            // font-family: Gilroy ☞;
-                        }
+                       
                         label{
                             display: block;
                             margin-bottom: 0.2rem;
@@ -179,9 +177,7 @@
             .configure_blog_sect2{
                 padding: 0;
                 &__pie{
-                    *{
-                        // font-family: Gilroy ☞;
-                    }
+                   
                     background: #E9E9E9;
                     padding: 15px 0px;
                     padding-bottom: 20px;
