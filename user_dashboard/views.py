@@ -1,15 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
-from . models import apiBox
+from . models import ApiList
 # Create your views here.
 
-class DashboardView(ListView):
+class ApiView(TemplateView):
     template_name = "user_dashboard/dashboard.html"
-    model = apiBox
 
     def get_context_data(self, **kwargs):
-        context = super(DashboardView, self).get_context_data(**kwargs)
-        context['queryset'] = apiBox.objects.all()
+        context = super(ApiView, self).get_context_data(**kwargs)
+        context['api_lists'] = ApiList.objects.all()
         return context
 
 class ConfigureApiView(TemplateView):

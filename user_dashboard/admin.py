@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import apiBox
+from .models import ApiList
 # Register your models here.
-admin.site.register(apiBox)
+admin.site.register(ApiList)

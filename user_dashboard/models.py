@@ -1,11 +1,10 @@
 from django.db import models
 
-# Create your models here.
-
-class apiBox(models.Model):
+#Models for all the API's in the database
+class ApiList(models.Model):
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    stats = models.CharField(max_length=255)
+    stats = models.CharField(max_length=255, default='3hrs')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
 
