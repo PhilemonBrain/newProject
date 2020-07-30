@@ -25,3 +25,6 @@ def faq(request):
 
 def signin(request):
     return render(request, 'accounts/sign_in.html')
+
+def signup(request):
+    return render(request, 'accounts/sign_up.html')
