@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 microapi/
 staticfiles/
+.vscode/
 .idea/
