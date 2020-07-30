@@ -11,5 +11,5 @@ def authDocs(request):
 
 # Views to hire consultant
 def consultant(request):
-    return render(request, 'api_docs/comment_api/api_hire_consultant.html')
+    return render(request, 'api_docs/hire_consultant.html')
 
