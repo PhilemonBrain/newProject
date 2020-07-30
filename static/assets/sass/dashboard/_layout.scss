@@ -222,6 +222,7 @@ $breakpoint-minitablet: 900px;
       padding: 0px;
       min-width: 100%;
       header{
+        justify-content: space-between;
         padding: 10px 0px 10px 10px;
         .menu{
           display: block;

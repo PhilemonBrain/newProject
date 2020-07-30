@@ -3,6 +3,10 @@
         overflow-y: auto;
         height: 89%;
         &__main{
+          justify-content: center;
+          margin-left: .2rem !important;
+          margin-right: .2rem !important;
+
             .configure_blog_sect1__cont1{
                 padding: 12px;
                 margin-bottom: 20px;
@@ -15,7 +19,7 @@
                 padding-top: 30px;
                 display: grid;
                 h2{
-                    font-family: Gilroy-Bold;
+                    // font-family: Gilroy-Bold;
                     line-height: 56px;
                     color: #000000;
                     margin-left: 30px;
@@ -23,7 +27,7 @@
                 }
                 p{
                     max-width: 500px;
-                    font-family: Gilroy ☞;
+                    // font-family: Gilroy ☞;
                     font-size: 18px;
                     line-height: 21px;
                     color: #5E5E66;
@@ -35,7 +39,7 @@
                     margin-left: 30px;
                     margin-right: 30px;
                     h5{
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                         font-size: 16px;
                         line-height: 19px;
                         color: #202020;
@@ -51,7 +55,7 @@
                             float: left;
                             margin: 15px;
                             text-align: center;
-                            font-family: Gilroy ☞;
+                            // font-family: Gilroy ☞;
                             font-size: 14px;
                             &__dot{
                                 padding: 4px;
@@ -70,7 +74,7 @@
                             float: left;
                             margin: 15px 0px;
                             text-align: center;
-                            font-family: Gilroy ☞;
+                            // font-family: Gilroy ☞;
                             font-size: 14px;
                             &__dot{
                                 padding: 4px;
@@ -96,7 +100,7 @@
                     margin-right: 30px;
                     .box{
                         *{
-                            font-family: Gilroy ☞;
+                            // font-family: Gilroy ☞;
                         }
                         margin: 15px 0px;
                         label{
@@ -119,7 +123,7 @@
                         width: 33%;
                         margin: 15px 0px;
                         *{
-                            font-family: Gilroy ☞;
+                            // font-family: Gilroy ☞;
                         }
                         label{
                             display: block;
@@ -148,7 +152,7 @@
                         label{
                             font-size: 16px;   
                             display: block;
-                            font-family: Gilroy ☞;
+                            // font-family: Gilroy ☞;
                             
                         }
                     }
@@ -163,7 +167,7 @@
                         line-height: 60px;
                         color: $secondary-color;
                         float: right;
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                         cursor: pointer;
                         &:hover{
                             color: $theme-color;
@@ -178,7 +182,7 @@
                 padding: 0;
                 &__pie{
                     *{
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                     }
                     background: #E9E9E9;
                     padding: 15px 0px;
@@ -216,7 +220,7 @@
                         line-height: 21px;
                         color: #121215;
                         margin-bottom: 0px;
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                         i{
                             float: right;
                         }
@@ -225,7 +229,7 @@
                         li{
                             list-style: inside;
                             a{  
-                                font-family: Gilroy ☞;
+                                // font-family: Gilroy ☞;
                                 font-size: 14px;
                                 line-height: 16px;
                                 color: #5E5E66;
@@ -251,7 +255,7 @@
                     padding-bottom: 20px;
                     margin-bottom: 20px;
                     background: #000000;
-                    font-family: Gilroy ☞;
+                    // font-family: Gilroy ☞;
                     text-align: center;
                     cursor: pointer;
                     &:hover{
@@ -267,7 +271,7 @@
                         line-height: 21px;
                         color: #121215;
                         margin-bottom: 0px;
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                     }
                     background: #E9E9E9;
                     padding: 15px;
@@ -278,10 +282,10 @@
                         line-height: 16px;
                         color: #121215;
                         margin-bottom: 0.2rem;
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                     }
                     select{
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                         background: #E9E9E9;
                         border: 0.5px solid #000000;
                         width: 90%;
@@ -301,7 +305,7 @@
                         line-height: 16px;
                         color: #5E5E66;
                         margin: 15px 0px;
-                        font-family: Gilroy ☞;
+                        // font-family: Gilroy ☞;
                     }
                 }
             }
