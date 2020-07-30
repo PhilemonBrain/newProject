@@ -23,3 +23,10 @@ def contact_us(request):
 def faq(request):
     return render(request, 'homepage/faq.html')
 
+#View to sign in
+def signin(request):
+    return render(request, 'accounts/sign_in.html')
+
+#views to sign up
+def signup(request):
+    return render(request, 'accounts/sign_up.html')
