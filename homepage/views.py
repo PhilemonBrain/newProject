@@ -22,3 +22,7 @@ def contact_us(request):
 # Views to FAQ
 def faq(request):
     return render(request, 'homepage/faq.html')
+
+# Views to docs
+def docs(request):
+    return render(request, 'api_docs/comment_api/comment_doc.html')
