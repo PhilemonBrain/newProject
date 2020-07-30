@@ -3,9 +3,13 @@ from django.views.generic import TemplateView
 # Create your views here.
 
 
-# Home page view
-class HomeView(TemplateView):
-    template_name = "homepage/index.html"
+# # Home page view
+# class HomeView(TemplateView):
+#     template_name = "homepage/index.html"
+
+# # Home page view
+def index(request):
+    return render(request, 'homepage/index.html')
 
 
 # About us view
