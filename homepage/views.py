@@ -14,6 +14,7 @@ def about(request):
 
 # Contact us page
 def contact_us(request):
+    """Sends an email to admin with user's data from the frontend"""
     if request.method == "POST":
         if request.POST.get("submit"):
             name = request.POST.get("name")
@@ -41,8 +42,6 @@ def signin(request):
 def signup(request):
     return render(request, 'accounts/sign_up.html')
 
-<<<<<<< HEAD
-=======
 
 #views to recover password
 def recover_password(request):
@@ -55,4 +54,3 @@ def reset_link(request):
 #views to recover password
 def reset_password(request):
     return render(request, 'accounts/reset_password.html')
->>>>>>> 77046de527a6278477414a2ef74a9803ea8ac3c6
