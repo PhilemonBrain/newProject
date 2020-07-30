@@ -26,9 +26,7 @@ def faq(request):
 #View to sign in
 def signin(request):
     return render(request, 'accounts/sign_in.html')
-# Views to docs
-def docs(request):
-    return render(request, 'api_docs/comment_api/comment_doc.html')
+
 #views to sign up
 def signup(request):
     return render(request, 'accounts/sign_up.html')
