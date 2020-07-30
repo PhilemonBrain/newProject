@@ -26,3 +26,7 @@ def faq(request):
 # Views to docs
 def docs(request):
     return render(request, 'api_docs/comment_api/comment_doc.html')
+
+# Views to hire consultant
+def consultant(request):
+    return render(request, 'api_docs/comment_api/api_hire_consultant.html')
