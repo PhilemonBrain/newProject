@@ -157,6 +157,10 @@
       width: 100%;
       padding: 10px 40px 10px 10px;
       overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
       .menu{
           font-size: 30px;
           line-height: 70px;
@@ -165,10 +169,13 @@
       }
       .profile_section{
         float: right;
-        // font-family: Gilroy ☞;
         font-size: 18px;
         color: #000000;
         height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         a{
           line-height: 70px;
           color: #DADADA;
@@ -177,7 +184,9 @@
         
         &__pix{
           float: right;
-          // display: inline-block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           border-left: 1px solid #DADADA;
           padding-left: 20px;
           margin: 0px 20px;
