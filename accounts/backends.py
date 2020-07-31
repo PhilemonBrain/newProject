@@ -9,17 +9,15 @@ class ApiAuthBackend(BaseBackend):
     """
     Authenticate User against the email auth
     """
-    print('yeah')
 
     def authenticate(self, request, **kwargs):
         email = kwargs['email']
         password = kwargs['password']
-        print(email, password)
 
         if email and password:
             try:
-                endpoint = '{api_url}user/login'
-                url = endpoint.format(api_url=settings.AUTH_API_URL)
+                #endpoint = '{api_url}user/login'
+                url = 'https://auth-microapi.herokuapp.com/api/user/login'
 
                 payload = {
                     "password": password,
@@ -27,18 +25,16 @@ class ApiAuthBackend(BaseBackend):
                 }
                 # set Authorization header
                 headers = {
-                    "Authorization": "Bearer %s" % (settings.AUTH_ADMIN_TOKEN)
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMjMzNzE2NGM1NjRkMDAwNDBlZDllNyIsImVtYWlsIjoiaWNlYmVla2F5eUBnbWFpbC5jb20iLCJEQlVSSSI6Im1vbmdvZGIrc3J2Oi8vZnVsbHN0YWNrOmZ1bGxzdGFja0BzYW5kYm94LTFsbTRoLm1vbmdvZGIubmV0L2F1dGgtYXBwP3JldHJ5V3JpdGVzPXRydWUiLCJpYXQiOjE1OTYxNDM0NDd9.E_zJqUcM8s0RHKamaE-gQss9Y1F1Nn0TRSu3q_45E58"
                 }
 
                 # response = requests.get(url, headers=headers, data = payload)
                 response = requests.request(
                     "POST", url, headers=headers, data=payload)
                 response = response.json()
-                print(response['data'])
 
                 if response['success'] == True:
                     user = get_user_model().objects.get(email=email)
-                    print(user)
                     return user
             except get_user_model().DoesNotExist:
                 return None
