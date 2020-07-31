@@ -9,8 +9,14 @@ from homepage.views import index
 @login_required(login_url='/accounts/signin')
 def api_list(request):
     user = User.objects.all()
-    all_apis = ApiList.objects.all()
+    all_apis = ApiList.objects.order_by('title')
     return render(request, 'user_dashboard/dashboard.html', {'all_apis':all_apis})
+
+
+def active_api(request, user, id):
+    if request.method == 'POST':
+        all_api = request.POST['all_api']
+    return render(request, 'user_dashboard/dashboard.html', {'added_apis':added_apis})
 
 
 @login_required(login_url='/accounts/signin')
