@@ -12,12 +12,14 @@
 	  	<div class="col-md-4 col-sm-12 col-lg-4 col-xs-4">	
 		  <h1 class="text-center"><strong>Sign In</strong></h1>
 		  <br>
-			<form action="{% url 'accounts:signin' %}" method="post" id="sign_form">
+			<form method="POST" id="sign_form">
 				{% csrf_token %}
+				<div class="text-primary"> {% for message in messages %}
+					{{ message }}
+				  {% endfor %}</div>
 				<div class="google-btn">
 					<button type="submit" class="btn-block"><img src="{% static 'img/google_logo.png' %}"/> Continue with Google</button>
 				</div>
-		     
 			  <div class="form-group">
 			    <label for="pwd">EMAIL</label>
 			    <input type="text" name="email" class="form-control input" placeholder="Enter your email adress...">
