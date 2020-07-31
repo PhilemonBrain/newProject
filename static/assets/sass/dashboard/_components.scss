@@ -168,21 +168,23 @@
   .dragBox {
     border-radius: 5px;
     display: inline-block;
-    // width: 23%;
-    width: 220px;
-    margin: 3px;
+    width: 23%;
+    // width: 220px;
+    // margin: 3px;
+    margin: 1%;
     z-index: 5;
   }
 
   @media (max-width: $breakpoint-tablet) {
     .dragBox {
       width: 48% !important;
+      margin: 1%;
     }
   }
   
   @media (max-width: $breakpoint-phone) {
     .dragBox {
-      width: 100% !important;
+      width: 98% !important;
     }
   }
 
