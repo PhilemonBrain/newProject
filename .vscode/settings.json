@@ -6,5 +6,6 @@
       "extensionName": ".min.css",
       "savePath": "/static/assets/css"
     }
-  ]
+  ],
+  "python.pythonPath": "C:\\Users\\kamal\\microapi_dashboard\\Scripts\\python.exe"
 }
