@@ -12,3 +12,7 @@ class ConfigureApiView(TemplateView):
     template_name = 'user_dashboard/configure_api.html'
 
 
+def settings(request):
+    return render(request, 'user_dashboard/acct_settings.html')
+
+
