@@ -30,23 +30,21 @@ def signup(request):
 
     if request.method == 'POST':
         username = request.POST.get('username')
-        print(username)
         first_name = request.POST.get('firstname')
         last_name = request.POST.get('lastname')
         email = request.POST.get('email')
         phonenumber = request.POST.get('phonenumber')
         confirm_pass = request.POST.get('confirmpwd')
         password = request.POST.get('pwd')
-        print(request.POST)
         if password == confirm_pass:
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Username Taken, Please try again')
                 return redirect('signup')
-                print(User.objects.all(), 1)
+                
 
             else:
-                endpoint = '{api_url}user/register'
-                url = endpoint.format(api_url=settings.AUTH_API_URL)
+                url = 'https://auth-microapi.herokuapp.com/api/user/register'
+                #url = endpoint.format(api_url=settings.AUTH_API_URL)
                 payload = {
                     "username": username,
                     "email": email,
@@ -54,18 +52,16 @@ def signup(request):
                     "phone_number": phonenumber,
                 }
                 headers = {
-                    "Authorization": "Bearer %s" % (settings.AUTH_ADMIN_TOKEN)
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMjMzNzE2NGM1NjRkMDAwNDBlZDllNyIsImVtYWlsIjoiaWNlYmVla2F5eUBnbWFpbC5jb20iLCJEQlVSSSI6Im1vbmdvZGIrc3J2Oi8vZnVsbHN0YWNrOmZ1bGxzdGFja0BzYW5kYm94LTFsbTRoLm1vbmdvZGIubmV0L2F1dGgtYXBwP3JldHJ5V3JpdGVzPXRydWUiLCJpYXQiOjE1OTYxNDM0NDd9.E_zJqUcM8s0RHKamaE-gQss9Y1F1Nn0TRSu3q_45E58"
                 }
                 # response = requests.request("POST", url, headers=headers, data = payload)
                 response = requests.request(
                     "POST", url, headers=headers, data=payload)
 
                 response = response.json()
-                print(response)
                 if response['success'] == True:
 
                     user = User(username=response['data']['username'])
-                    print(user)
                     user.first_name = first_name
                     user.last_name = last_name
                     user.email = response['data']['email']
@@ -79,7 +75,6 @@ def signup(request):
                     msg = response['message']
                     messages.info(request, f'{msg}')
                     return redirect("accounts:signup")
-                print(User.objects.all(), 3)
         else:
             messages.error(request, 'Password mismatch')
             return redirect("accounts:signup")
