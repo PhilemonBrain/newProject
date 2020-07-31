@@ -15,14 +15,15 @@ logger = logging.getLogger(__name__)
 
 def signin(request):
     if request.method == "POST":
-        endpoint = '{api_url}/user/login'
+        endpoint = '{api_url}user/login'
         url = endpoint.format(api_url=settings.AUTH_API_URL)
-        token = 'bearer {api_token}'
-        payload = request.POST
-        headers = token.format(api_token=settings.AUTH_ADMIN_TOKEN)
+        token = 'Bearer %s' % (settings.AUTH_ADMIN_TOKEN)
+        payload = {"email": request.POST["email"],
+                   "password": request.POST["password"]}
+        headers = {'Authorization': '%s' % (token)}
         # make http call to endpoint
-        response = requests.post(url, headers=headers, data=payload)
+        response = requests.post(url, data=payload, headers=headers)
 
         if response.status_code == 200:
             result = response.json()
-        return result
+            print (result)
