@@ -24,6 +24,15 @@ p {
     overflow: hidden;
 }
 
+#tabs {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .invisible {
+    display: none !important;
+  }
+}
+
 #comment_main{
 
     // //  margin-top: 68px;
@@ -70,7 +79,13 @@ p {
         flex-direction: row;
         flex-flow: nowrap;
         width: 100%;
-        margin-left: 80px;
+        // margin-left: 80px;
+    }
+
+    .my-row {
+      .row.no-wrap {
+        justify-content: flex-end;
+      }
     }
 
     .ms-links-div{
@@ -715,8 +730,6 @@ p {
 
         #other__links_div {
             // top: 55%;
-
-
         }
 
     }
