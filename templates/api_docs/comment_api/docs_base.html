@@ -86,7 +86,7 @@
   <!-- docs nav -->
 
   <main id="comment_main">
-    <div class="container-fluidx">
+    <div class="container">
       <div class="row top-row ">
         <div class="col-lg-8 col-md-7 col-sm-12 mb-3">
           <div class="rowx no-wrap">
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="col-lg-4 col-md-5 col-sm-12 my-row">
           <div class="row no-wrap">
             <div class="col-lg-4 col-md-4 col-sm-5">
               <p class="user-title">
@@ -154,18 +154,18 @@
     <div class="ms-links-div">
 
       <div class="row1">
-        <a href="#" class="tab ms-links active" onclick="currentTab(1)">Introduction</a>
+        <a href="#" class="tab ms-links active">Introduction</a>
 
-        <a href="#" class="tab ms-links" onclick="currentTab(2)">API Reference</a>
+        <a href="#" class="tab ms-links">API Reference</a>
 
-        <a href="#" class="tab ms-links" onclick="currentTab(3)">Endpoints</a>
+        <a href="#" class="tab ms-links">Endpoints</a>
 
       </div>
 
       <div class="row2">
         <!-- <a href="#" class="ms-links">Video Guide</a> -->
 
-        <a href="#" class=" tab ms-links" onclick="currentTab(4)">Tutorial</a>
+        <a href="#" class="tab ms-links">Tutorial</a>
 
       </div>
 
@@ -184,11 +184,11 @@
       <div class="col-lg-9 col-md-9 col-sm-12 m-hide">
         <!-- <div class="containr"> -->
         <ul class="links">
-          <li class="s-links active"><a href="#">Introduction</a></li>
-          <li class="s-links "><a href="#">API Reference</a></li>
-          <li class="s-links "><a href="#">Endpoints</a></li>
+          <li class="tab__menu__link s-links active"><a href="#">Introduction</a></li>
+          <li class="tab__menu__link s-links "><a href="#">API Reference</a></li>
+          <li class="tab__menu__link s-links "><a href="#">Endpoints</a></li>
           <!-- <li class="s-links "><a href="#">Video Guide</a></li> -->
-          <li class="s-links"><a href="#">Tutorial</a></li>
+          <li class="tab__menu__link s-links"><a href="#">Tutorial</a></li>
         </ul>
 
         <!-- </div> -->
@@ -258,6 +258,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="{% static 'js/nav.js' %}"></script>
   <script src="{% static 'js/doc.js' %}"></script>
+  <script src="{% static 'js/doc-tabs.js' %}"></script>
 
 
 </body>
