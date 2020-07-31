@@ -112,7 +112,7 @@ LOGOUT_REDIRECT_URL = 'homepage/index.html'
 
 AUTHENTICATION_BACKENDS = [
     'accounts.backends.ApiAuthBackend',
-    'django.contrib.auth.backends.ModelBackend'
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 # Password validation
