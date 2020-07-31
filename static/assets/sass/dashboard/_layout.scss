@@ -77,6 +77,11 @@
             background-color: #5E5E66;
             color: $secondary-color;
           }
+
+          button:focus {
+            box-shadow: none !important;
+            border-color: lighten($color: $theme-color, $amount: 10);
+          }
         }
       } 
 
@@ -244,6 +249,10 @@
             height: 100%;
             min-height: 100%;
             border-radius: 0;
+
+            button.close:focus {
+              outline: none;
+            }
           }
         }
 
