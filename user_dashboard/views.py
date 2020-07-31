@@ -7,8 +7,6 @@ def api_list(request):
     all_apis = ApiList.objects.all()
     return render(request, 'user_dashboard/dashboard.html', {'all_apis':all_apis})
 
-
-class ConfigureApiView(TemplateView):
-    template_name = 'user_dashboard/configure_api.html'
-
+def configure_api(request):
+    return render(request, 'user_dashboard/configure_api.html')
 
