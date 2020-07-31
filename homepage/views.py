@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from django.conf import settings
+import requests
 
 # Home page view
 def index(request):
@@ -19,13 +19,19 @@ def contact_us(request):
         if request.POST.get("submit"):
             name = request.POST.get("name")
             email = request.POST.get("email")
-            sender = settings.EMAIL_HOST_USER
             message = request.POST.get("message")
-            admin = ""
+            admin = "immanuelomeogah@gmail.com"
 
+            # validation and sending an email with the email microapi
             if name and email and message:
-                send_mail(
-                    email, message, name, [admin]
+                url = "https://email.microapi.dev/v1/sendmail/"
+                response = requests.post(url, data = {
+                "recipient": admin,
+                "sender": "phemmylintry@gmail.com",
+                "subject": (email + '\n' + name),
+                "body": message,
+                "cc": "",
+                "bcc": ""}
                 )
     return render(request, 'homepage/contact.html')
 
