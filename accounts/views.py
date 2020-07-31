@@ -20,10 +20,10 @@ def login(request):
         print(user)
         if user is not None:
             auth.login(request, user)
-            return redirect("dashboard")
+            return redirect("dashboard:dashboard")
         else:
             messages.info(request, 'invalid credentials')
-            return redirect("signin")
+            return redirect("accounts:signin")
     return render(request,"accounts/sign_in.html")
 
 def register(request):
@@ -43,12 +43,7 @@ def register(request):
                 messages.info(request,'Username Taken, Please try again')
                 return redirect('signup')
                 print(User.objects.all(), 1)
-
-            elif User.objects.filter(email=email).exists():
-                messages.info(request,'Email already exists, contact admin')
-                return redirect('signup')
-                print(User.objects.all(), 2)
-
+                
             else:
                 url = "https://auth-microapi.herokuapp.com/api/user/register"
                 payload = {
@@ -65,20 +60,23 @@ def register(request):
 
                 response = response.json()
                 print(response)
-                if response['success'] == 'true':
+                if response['success'] == True:
 
-                    user = User(username=response['username'])
-                    user.email = response['email']
-                    user.user_id = response['id']
+                    user = User(username=response['data']['username'])
+                    print(user)
+                    user.email = response['data']['email']
+                    user.user_id = response['data']['id']
                     user.is_active = False
                     user.save()
-                    messages.info(request, 'Please check Your Email')
-                    return redirect("login")
+                    msg =response['message']
+                    messages.info(request, f'{msg}')
+                    return redirect("accounts:signin")
                 else:
-                    messages.info(request, 'Please check the fields')
-                    return redirect("signup") 
+                    msg =response['message']
+                    messages.info(request, f'{msg}')
+                    return redirect("accounts:signup") 
                 print(User.objects.all(), 3)
         else:
             messages.error(request, 'Password mismatch')
-            return redirect("signup")       
+            return redirect("accounts:signup")       
     return render(request, "accounts/sign_up.html")
