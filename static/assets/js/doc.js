@@ -3,8 +3,6 @@
 var x = document.querySelectorAll(".tab__content");
 var tabs = document.querySelectorAll(".tab");
 
-console.log(tabs);
-
 const currentTab = n => {
     showTab(slideIndex = n);
 };
