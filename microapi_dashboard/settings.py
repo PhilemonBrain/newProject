@@ -107,6 +107,9 @@ AUTH_USER_MODEL = "accounts.User"
 AUTH_API_URL = config('AUTH_API_URL', default='')
 AUTH_ADMIN_TOKEN = config('AUTH_ADMIN_TOKEN', default='')
 
+LOGIN_URL= '/accounts/signin'
+LOGOUT_REDIRECT_URL = 'homepage/index.html'
+
 AUTHENTICATION_BACKENDS = [
     'accounts.backends.ApiAuthBackend',
 ]
