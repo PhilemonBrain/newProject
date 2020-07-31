@@ -81,8 +81,8 @@ document.querySelector('body').addEventListener('mousemove', () => {
       </div>
 
       <div className="text" style="text-align:center;">
-      <h4 style="color: #9c9c9c">There's nothing here</h4>
-      <p style="color: #9c9c9c;">Drag from available APIs or use the add button to add new API</p>
+      <h4 style="color: lightgrey">There's nothing here</h4>
+      <p style="color: lightgrey;">Drag from available APIs or use the add button to add new API</p>
       </div>
       </div>
     `
