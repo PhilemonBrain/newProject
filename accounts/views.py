@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from  django.contrib.auth.models import auth
+from django.contrib.auth.models import auth
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import requests
@@ -10,53 +10,23 @@ import json
 from .models import User
 
 
-
-
-# Create your views here.
-
-# signin function
-
-
 def signin(request):
-    if request.method == "POST":
-        endpoint = '{api_url}user/login'
-        url = endpoint.format(api_url=settings.AUTH_API_URL)
-        token = 'Bearer %s' % (settings.AUTH_ADMIN_TOKEN)
-        payload = {"email": request.POST["email"],
-                   "password": request.POST["password"]}
-        headers = {'Authorization': '%s' % (token)}
-        # make http call to endpoint
-        response = requests.post(url, data=payload, headers=headers)
-
-        if response.status_code == 200:
-            result = response.json()
-            session_data = {"username": result["data"]["data"]["username"],
-                            "email": result["data"]["data"]["email"], "userId": result["data"]["data"]["id"]}
-            request.sessions = session_data
-
-            print(result["data"]["data"]["username"])
-            return HttpResponse("Login Successful. Redirecting to dashboard ...")
-
-# Create your views here.
-
-#this is the login page
-def login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        username = request.POST.get('username')
         print(request.POST)
-        user = auth.authenticate(email=email, password=password, username=username)
+        user = auth.authenticate(email=email, password=password)
         print(user)
         if user is not None:
             auth.login(request, user)
             return redirect("dashboard:dashboard")
         else:
-            messages.info(request, 'invalid credentials')
+            messages.info(request, 'Invalid credentials')
             return redirect("accounts:signin")
-    return render(request,"accounts/sign_in.html")
+    return render(request, "accounts/sign_in.html")
 
-def register(request):
+
+def signup(request):
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -70,23 +40,25 @@ def register(request):
         print(request.POST)
         if password == confirm_pass:
             if User.objects.filter(email=email).exists():
-                messages.info(request,'Username Taken, Please try again')
+                messages.info(request, 'Username Taken, Please try again')
                 return redirect('signup')
                 print(User.objects.all(), 1)
-                
+
             else:
-                url = "https://auth-microapi.herokuapp.com/api/user/register"
+                endpoint = '{api_url}user/register'
+                url = endpoint.format(api_url=settings.AUTH_API_URL)
                 payload = {
-                    "username":username,
+                    "username": username,
                     "email": email,
                     "password": password,
                     "phone_number": phonenumber,
                 }
-                headers= {
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMjJmY2QxYTUwOTA4MDAwNGQ5MmVlMSIsImVtYWlsIjoidWphbWVzNDFAeWFob28uY29tIiwiREJVUkkiOiJtb25nb2RiK3NydjovL2Z1bGxzdGFjazpmdWxsc3RhY2tAc2FuZGJveC0xbG00aC5tb25nb2RiLm5ldC9hdXRoLWFwcD9yZXRyeVdyaXRlcz10cnVlIiwiaWF0IjoxNTk2MTMzODMyfQ.Hj4qWdwl7F-nDsI76noGLMo-hz0uZphntLMjG-SPMQs"
+                headers = {
+                    "Authorization": "Bearer %s" % (settings.AUTH_ADMIN_TOKEN)
                 }
                 # response = requests.request("POST", url, headers=headers, data = payload)
-                response = requests.request("POST", url, headers=headers, data= payload)
+                response = requests.request(
+                    "POST", url, headers=headers, data=payload)
 
                 response = response.json()
                 print(response)
@@ -94,19 +66,21 @@ def register(request):
 
                     user = User(username=response['data']['username'])
                     print(user)
+                    user.first_name = first_name
+                    user.last_name = last_name
                     user.email = response['data']['email']
                     user.user_id = response['data']['id']
                     user.is_active = False
                     user.save()
-                    msg =response['message']
+                    msg = response['message']
                     messages.info(request, f'{msg}')
                     return redirect("accounts:signin")
                 else:
-                    msg =response['message']
+                    msg = response['message']
                     messages.info(request, f'{msg}')
-                    return redirect("accounts:signup") 
+                    return redirect("accounts:signup")
                 print(User.objects.all(), 3)
         else:
             messages.error(request, 'Password mismatch')
-            return redirect("accounts:signup")       
+            return redirect("accounts:signup")
     return render(request, "accounts/sign_up.html")

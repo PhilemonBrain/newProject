@@ -9,14 +9,15 @@
         <h1 class="text-center"><strong>Sign Up</strong></h1>
         <br />
 
-        <form method="POST" id="sign_form">
+        <form action="{% url 'accounts:signup' %}" method="POST" id="sign_form">
           {% csrf_token %}
-          <div class="text-primary"> {% for message in messages %}
-            {{ message }}
-          {% endfor %}</div>
+          <div class="text-primary">
+            {% for message in messages %} {{ message }} {% endfor %}
+          </div>
           <div class="google-btn">
             <button type="submit" class="primary-btn btn-block">
-              <img src="{% static 'img/google_logo.png' %}"/> Continue with Google
+              <img src="{% static 'img/google_logo.png' %}" /> Continue with
+              Google
             </button>
           </div>
           <div class="form-group">
