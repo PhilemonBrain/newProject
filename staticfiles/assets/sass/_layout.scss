@@ -34,7 +34,8 @@ header {
 
     ul {
       display: flex;
-      justify-content: flex-start;
+      list-style: none;
+      justify-content: space-between;
       align-items: center;
       margin: 0em;
       width: 100%;
