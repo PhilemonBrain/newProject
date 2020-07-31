@@ -136,3 +136,9 @@ staticfiles/
 # static files folder
 
 staticfiles/
+
+# Virtual ENV
+penv
+
+
+.gitignore

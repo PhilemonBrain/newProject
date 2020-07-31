@@ -10,6 +10,11 @@ import json
 from .models import User
 
 
+HEADERS = {
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMjMzNzE2NGM1NjRkMDAwNDBlZDllNyIsImVtYWlsIjoiaWNlYmVla2F5eUBnbWFpbC5jb20iLCJEQlVSSSI6Im1vbmdvZGIrc3J2Oi8vZnVsbHN0YWNrOmZ1bGxzdGFja0BzYW5kYm94LTFsbTRoLm1vbmdvZGIubmV0L2F1dGgtYXBwP3JldHJ5V3JpdGVzPXRydWUiLCJpYXQiOjE1OTYxNDM0NDd9.E_zJqUcM8s0RHKamaE-gQss9Y1F1Nn0TRSu3q_45E58"
+        }
+BASE_URL = "https://auth-microapi.herokuapp.com"
+
 def signin(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -79,3 +84,41 @@ def signup(request):
             messages.error(request, 'Password mismatch')
             return redirect("accounts:signup")
     return render(request, "accounts/sign_up.html")
+
+
+def pass_recovery(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        url = BASE_URL + "/api/user/password/reset"
+        payload = {
+                    "email": email
+                }
+        response = requests.post(url, headers=HEADERS, data=payload)
+        response = response.content.decode("utf8")
+        response = json.loads(response)
+        print(response)
+        if response["success"] == True:
+            return redirect("accounts:sent-link")
+        else:
+            messages.error(request, response["message"])
+            print(messages.info)
+            return redirect("accounts:recover")
+    return render(request, "accounts/recover_password.html")
+        
+
+def sent_link(request):
+    return render(request, "accounts/reset_link_sent.html")
+
+
+def logout(request):
+    url =  BASE_URL + "/api/user/logout"
+    response = requests.get(url, headers=HEADERS)
+    print(response.content)
+    response = response.content.decode("utf8")
+    response = json.loads(response)
+    if response["success"] == True:
+        auth.logout(request)        
+        return redirect("accounts:signin")
+    else:
+        messages.error(request, "Something went wrong, try again")
+        return redirect("dashboard:dashboard")
