@@ -1,7 +1,7 @@
-from django.urls import path
-from .views import ConfigureApiView, ApiView
+from django.urls import path, re_path
+from . import views
 
 urlpatterns = [
-    path('', ApiView.as_view(), name='dashboard'),
-    path('configure_api/', ConfigureApiView.as_view(), name='configure_api')
+    path('', views.api_list, name='dashboard'),
+    path('configure_api/', views.ConfigureApiView.as_view(), name='configure_api')
 ]
