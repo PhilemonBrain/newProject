@@ -69,38 +69,20 @@ $( '.dropBox' ).droppable({
 // show empty for no content
 
 
-  document.querySelector('body').addEventListener('mousemove', () => {
+document.querySelector('body').addEventListener('mousemove', () => {
 
-    let activeApiBox = document.querySelector('#container .active-row');
-    let apiPresent = document.querySelector('#container .active-row dragBox');
+  let activeApiBox = document.querySelector('#container .active-row');
+  let apiPresent = document.querySelector('#container .active-row .dragBox');
 
-    if (activeApiBox && !apiPresent) {
-      activeApiBox.innerHTML = 
-      /*html*/`
-        <div class="empty-api" style="display:flex; flex-direction:column; justify-content:center; align-items:center; width: 100%">
-        <div className="icon">
-        <span class="material-icons" style="font-size: 65px; color: lightgrey">cloud_off</span>
-        </div>
-  
-        <div className="text" style="text-align:center;">
-        <h4 style="color: lightgrey">There's nothing here</h4>
-        <p style="color: lightgrey;">Drag from available APIs or use the add button to add new API</p>
-        </div>
-        </div>
-      `
-    }
-  })
+  let content
 
+  if (activeApiBox && !apiPresent) {
 
-
-
-
-// notifications
-
-// let notificat
-
-// document.querySelector('body').addEventListener('mousemove', () => {
-  
-// })
+    document.querySelector('#container .active-row #empty-api').style.display = 'flex'
+    
+  } else {
+    document.querySelector('#container .active-row #empty-api').style.display = 'none'
+  }
+})
 
 
