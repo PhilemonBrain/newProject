@@ -109,6 +109,7 @@ AUTH_ADMIN_TOKEN = config('AUTH_ADMIN_TOKEN', default='')
 
 AUTHENTICATION_BACKENDS = [
     'accounts.backends.ApiAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 # Password validation

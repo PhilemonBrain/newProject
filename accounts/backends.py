@@ -1,8 +1,13 @@
-from django.contrib.auth.backends import BaseBackend
+from django.contrib.auth.backends import BaseBackend, ModelBackend
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import requests
 from .models import User
+
+# class MyModelBack(ModelBackend):
+#     #def __init__(self, username, password)
+#     def authenticate(self, request, **kwargs):
+
 
 
 class ApiAuthBackend(BaseBackend):
@@ -11,8 +16,23 @@ class ApiAuthBackend(BaseBackend):
     """
 
     def authenticate(self, request, **kwargs):
+        try:
+            if request.POST.get('next') == '/admin/' and request.POST.get('username'):
+                username = request.POST.get('username')
+                password = request.POST.get('password')
+                try:
+                    user = get_user_model().objects.get(username=username)
+                    if user.is_superuser:
+                        return user
+                except get_user_model().DoesNotExist:
+                    return None
+        except:
+            pass
+            
+
         email = kwargs['email']
         password = kwargs['password']
+        
 
         if email and password:
             try:
