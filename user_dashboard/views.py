@@ -9,7 +9,7 @@ from homepage.views import index
 @login_required(login_url='/accounts/signin')
 def api_list(request):
     user = User.objects.all()
-    all_apis = ApiList.objects.order_by('title')
+    all_apis = ApiList.objects.order_by('title')[:4]
     return render(request, 'user_dashboard/dashboard.html', {'all_apis':all_apis})
 
 
