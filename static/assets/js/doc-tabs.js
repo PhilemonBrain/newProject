@@ -2,16 +2,15 @@ let allTabs = ['#get-started', '#reference', '#endpoint', '#tutorial', '#hire_co
 
 let buttons = document.querySelectorAll('.tab__menu__link');
 
+
 buttons.forEach((btn, index) => {
 
   btn.addEventListener('click', (e) => {
 
-    console.log(e.target.classList)
 
     for (let i = 0; i < allTabs.length; i++) {
       buttons[i].classList.remove('active')
     }
-
     buttons[index].classList.add('active')
   
 
@@ -27,4 +26,4 @@ buttons.forEach((btn, index) => {
 
   })
 
-})
+});
