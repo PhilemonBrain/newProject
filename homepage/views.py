@@ -20,7 +20,7 @@ def contact_us(request):
             name = request.POST.get("name")
             email = request.POST.get("email")
             message = request.POST.get("message")
-            admin = "immanuelomeogah@gmail.com"
+            admin = "immanuelhng@gmail.com"
 
             # validation and sending an email with the email microapi
             if name and email and message:
