@@ -1,20 +1,24 @@
-
 <!-- Get started tab -->
+{% extends 'api_docs/comment_api/docs_base.html' %}
 
-{% include 'api_docs/comment_api/api_get_started.html' %}
+{% block content  %}
 
-<!-- Reference tab -->
+<div id="tabs">
 
-{% include 'api_docs/comment_api/api_reference.html' %}
+  {% include 'api_docs/comment_api/api_get_started.html' %}
 
-<!-- Endpoints tab -->
+  <!-- Reference tab -->
+  
+  {% include 'api_docs/comment_api/api_reference.html' %}
+  
+  <!-- Endpoints tab -->
+  
+  {% include 'api_docs/comment_api/api_endpoints.html' %}
+  
+  <!-- Tutorials tab -->
+  
+  {% include 'api_docs/comment_api/api_tutorial.html' %}
 
-{% include 'api_docs/comment_api/api_endpoints.html' %}
+</div>
 
-<!-- Tutorials tab -->
-
-{% include 'api_docs/comment_api/api_tutorial.html' %}
-
-
-
-
+{% endblock %}

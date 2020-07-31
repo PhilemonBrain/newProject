@@ -1,11 +1,8 @@
-{% extends 'api_docs/comment_api/docs_base.html' %}
-
-
 {% block content %}
 
 {% load static %}
 
-<div id="other__links_div" class="hide">
+<!-- <div id="other__links_div" class="hide tab__content">
 
   <div class="container">
 
@@ -82,10 +79,10 @@
 
   </div>
 
-</div>
+</div> -->
 
 
-<section class="main-section">
+<section id="tutorial" class="main-section tab__content invisible">
 
   <div class="container">
 
@@ -95,7 +92,7 @@
 
         <div class="container">
 
-          <div class="form-group">
+          <div class="form-group border p-1">
             <i>
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -103,7 +100,7 @@
                   fill="#999999" />
               </svg>
             </i>
-            <input type="text" placeholder="search">
+            <input type="text" placeholder="search" class="border-0">
 
           </div>
 

@@ -23,17 +23,17 @@
     <div class="container">
       <div class="row pt-4 pb-4 header__wrapper">
         <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
-          <a href="{% url 'index' %}"  class="logo"><img src="{% static 'img/logo.svg' %}" alt="site logo"></a>
+          <a href="{% url 'index' %}" class="logo"><img src="{% static 'img/logo.svg' %}" alt="site logo"></a>
         </div>
 
         <nav class="col-lg-6">
-			  <ul class="nav__menu">
-			  <li><a href="{% url 'index' %}" >Home</a></li>
-			  <li><a href="{% url 'about' %}">About us</a></li>
-			  <li><a href="{% url 'contact' %}">Contact us</a></li>
-			  <li><a href="{% url 'commentdocs' %}">Documentation</a></li>
-			</ul>
-		  </nav>
+          <ul class="nav__menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'contact' %}">Contact us</a></li>
+            <li><a href="{% url 'commentdocs' %}">Documentation</a></li>
+          </ul>
+        </nav>
 
         <div class="col-lg-4 menu__button__container">
           <a href="{% url 'signin' %}" button class="secondary-btn">Sign In</button></a>
@@ -59,7 +59,7 @@
               </div>
 
               <ul class="mobile__nav__menu">
-                <li><a href="{% url 'index' %}" ><b>Home</b></a></li>
+                <li><a href="{% url 'index' %}"><b>Home</b></a></li>
                 <li><a href="{% url 'about' %}"><b>About us</b></a></li>
                 <li><a href="{% url 'contact' %}"><b>Contact us</b></a></li>
                 <li><a href="{% url 'commentdocs' %}"><b>Documentation</b></a></li>
@@ -86,7 +86,7 @@
   <!-- docs nav -->
 
   <main id="comment_main">
-    <div class="container-fluidx">
+    <div class="container">
       <div class="row top-row ">
         <div class="col-lg-8 col-md-7 col-sm-12 mb-3">
           <div class="rowx no-wrap">
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="col-lg-4 col-md-5 col-sm-12 my-row">
           <div class="row no-wrap">
             <div class="col-lg-4 col-md-4 col-sm-5">
               <p class="user-title">
@@ -154,18 +154,18 @@
     <div class="ms-links-div">
 
       <div class="row1">
-        <a href="#" class="ms-links active">Introduction</a>
+        <a href="#" class="tab ms-links active">Introduction</a>
 
-        <a href="#" class="ms-links">API Reference</a>
+        <a href="#" class="tab ms-links">API Reference</a>
 
-        <a href="#" class="ms-links">Endpoints</a>
+        <a href="#" class="tab ms-links">Endpoints</a>
 
       </div>
 
       <div class="row2">
         <!-- <a href="#" class="ms-links">Video Guide</a> -->
 
-        <a href="#" class="ms-links">Tutorial</a>
+        <a href="#" class="tab ms-links">Tutorial</a>
 
       </div>
 
@@ -184,11 +184,11 @@
       <div class="col-lg-9 col-md-9 col-sm-12 m-hide">
         <!-- <div class="containr"> -->
         <ul class="links">
-          <li class="s-links active"><a href="#">Introduction</a></li>
-          <li class="s-links "><a href="#">API Reference</a></li>
-          <li class="s-links "><a href="#">Endpoints</a></li>
+          <li class="tab__menu__link s-links active"><a href="#">Introduction</a></li>
+          <li class="tab__menu__link s-links "><a href="#">API Reference</a></li>
+          <li class="tab__menu__link s-links "><a href="#">Endpoints</a></li>
           <!-- <li class="s-links "><a href="#">Video Guide</a></li> -->
-          <li class="s-links"><a href="#">Tutorial</a></li>
+          <li class="tab__menu__link s-links"><a href="#">Tutorial</a></li>
         </ul>
 
         <!-- </div> -->
@@ -204,7 +204,7 @@
   <!-- Header ends here -->
 
   {% block content %}
-  
+
   {% endblock %}
 
   <!-- Normal Page Goes Here -->
@@ -258,8 +258,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="{% static 'js/nav.js' %}"></script>
   <script src="{% static 'js/doc.js' %}"></script>
+  <script src="{% static 'js/doc-tabs.js' %}"></script>
 
 
-  </body>
+</body>
 
 </html>
