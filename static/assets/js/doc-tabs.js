@@ -40,7 +40,7 @@ mobileButtons.forEach((btn, index) => {
   btn.addEventListener('click', (e) => {
 
 
-    for (let i = 0; i < allTabs.length - 1; i++) {
+    for (let i = 0; i < allTabs.length; i++) {
       mobileButtons[i].classList.remove('active')
       buttons[i].classList.remove('active')
     }
