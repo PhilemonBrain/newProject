@@ -64,3 +64,29 @@ $( '.dropBox' ).droppable({
    
   }
 });
+
+
+// show empty for no content
+let activeApiBox = document.querySelector('#container .active-row');
+let apiPresent = document.querySelector('#container .active-row dragBox');
+
+document.querySelector('body').addEventListener('mousemove', () => {
+
+  if (!apiPresent) {
+    activeApiBox.innerHTML = 
+    /*html*/`
+      <div class="empty-api" style="display:flex; flex-direction:column; justify-content:center; align-items:center; width: 100%">
+      <div className="icon">
+      <span class="material-icons" style="font-size: 65px; color: lightgrey">cloud_off</span>
+      </div>
+
+      <div className="text" style="text-align:center;">
+      <h4 style="color: #9c9c9c">There's nothing here</h4>
+      <p style="color: #9c9c9c;">Drag from available APIs or use the add button to add new API</p>
+      </div>
+      </div>
+    `
+  }
+})
+
+
