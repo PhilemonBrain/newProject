@@ -78,12 +78,13 @@
                 <article class="dropBox inactive-row">
                   
                   <!-- Single box -->
+                  {% for all_api in all_apis %}
                   <div class="dragBox inactive-box">
                     <div class="api__box">
                       <div class="api__box__shadow">
                         <div class="api__box__inner">
                           <div class="api__box__heading">
-                            <h5>User API</h5>
+                            <h5>{{ all_api.title }}</h5>
                             <!-- toggle -->
                             <div class="pretty p-switch p-fill">
                               <input type="checkbox" />
@@ -93,11 +94,11 @@
                             </div>
                           </div>
                           <div class="api__box__text">
-                            <small>For users</small>
+                            <small>{{ all_api.description }}</small>
                           </div>
                           <div class="api__box__stats">
                             <p>Stats <br>
-                              <span>4/hr</span>
+                              <span>{{ all_api.stats }}</span>
                             </p>
                           </div>
                           <div class="api__box__buttons">
@@ -118,133 +119,7 @@
                       </div>
                     </div>
                   </div> <!-- Single box end -->
-
-                  <!-- Single box -->
-                  <div class="dragBox inactive-box">
-                    <div class="api__box">
-                      <div class="api__box__shadow">
-                        <div class="api__box__inner">
-                          <div class="api__box__heading">
-                            <h5>AWS API</h5>
-                            <!-- toggle -->
-                            <div class="pretty p-switch p-fill">
-                              <input type="checkbox" />
-                              <div class="state p-success">
-                                <label></label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="api__box__text">
-                            <small>To host</small>
-                          </div>
-                          <div class="api__box__stats">
-                            <p>Stats <br>
-                              <span>4/hr</span>
-                            </p>
-                          </div>
-                          <div class="api__box__buttons">
-                            <a href="{% url 'dashboard:configure_api' %}"><button class="secondary-btn">+ Add API</button></a>
-                            <!-- <input type="radio" name="" id=""> -->
-                            <!-- success -->
-                            <div class="prindex.html pretty p-default p-round p-toggle">
-                              <input type="checkbox" />
-                              <div class="state p-success p-on">
-                                <label></label>
-                              </div>
-                              <div class="state p-danger p-off">
-                                <label></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- Single box end -->
-
-                  <!-- Single box -->
-                  <div class="dragBox inactive-box">
-                    <div class="api__box">
-                      <div class="api__box__shadow">
-                        <div class="api__box__inner">
-                          <div class="api__box__heading">
-                            <h5>Cert API</h5>
-                            <!-- toggle -->
-                            <div class="pretty p-switch p-fill">
-                              <input type="checkbox" />
-                              <div class="state p-success">
-                                <label></label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="api__box__text">
-                            <small>To print certificates</small>
-                          </div>
-                          <div class="api__box__stats">
-                            <p>Stats <br>
-                              <span>4/hr</span>
-                            </p>
-                          </div>
-                          <div class="api__box__buttons">
-                            <a href="{% url 'dashboard:configure_api' %}"><button class="secondary-btn">+ Add API</button></a>
-                            <!-- <input type="radio" name="" id=""> -->
-                            <!-- success -->
-                            <div class="prindex.html pretty p-default p-round p-toggle">
-                              <input type="checkbox" />
-                              <div class="state p-success p-on">
-                                <label></label>
-                              </div>
-                              <div class="state p-danger p-off">
-                                <label></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- Single box end -->
-
-                  <!-- Single box -->
-                  <div class="dragBox inactive-box">
-                    <div class="api__box">
-                      <div class="api__box__shadow">
-                        <div class="api__box__inner">
-                          <div class="api__box__heading">
-                            <h5>Receipt API</h5>
-                            <!-- toggle -->
-                            <div class="pretty p-switch p-fill">
-                              <input type="checkbox" />
-                              <div class="state p-success">
-                                <label></label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="api__box__text">
-                            <small>For business</small>
-                          </div>
-                          <div class="api__box__stats">
-                            <p>Stats <br>
-                              <span>4/hr</span>
-                            </p>
-                          </div>
-                          <div class="api__box__buttons">
-                            <a href="{% url 'dashboard:configure_api' %}"><button class="secondary-btn">+ Add API</button></a>
-                            <!-- <input type="radio" name="" id=""> -->
-                            <!-- success -->
-                            <div class="prindex.html pretty p-default p-round p-toggle">
-                              <input type="checkbox" />
-                              <div class="state p-success p-on">
-                                <label></label>
-                              </div>
-                              <div class="state p-danger p-off">
-                                <label></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> <!-- Single box end -->
-
+                  {% endfor %}
                 </article>
                 
               </section>

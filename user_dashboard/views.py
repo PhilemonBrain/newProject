@@ -17,6 +17,7 @@ def api_list(request):
 def configure_api(request):
     return render(request, 'user_dashboard/configure_api.html')
 
+
 def logout(request):
     auth.logout(request)
     return redirect('index')

@@ -78,10 +78,10 @@
             <h5 class="sidebar__section__content__sub__title">Accounts <i class="fas fa-angle-up"></i></h5>
             <ul class="sidebar__section__content__sub__list">
               <li>
-                <a href="#">Account settings</a>
+                <a href="{% url 'dashboard:settings' %}">Account settings</a>
               </li>
               <li>
-                <a href="#">Sign out</a>
+                <a href="{% url 'dashboard:logout' %}">Sign out</a>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@
         <a class="menu"><i class="fas fa-bars"></i></a>
         <div class="profile_section">
           <a><i class="far fa-bell"></i></a>
-          <div class="profile_section__pix">Samuel Eze<a><i class="far fa-user"></i></a></div>
+          <div class="profile_section__pix">{{user.username}}<a><i class="far fa-user"></i></a></div>
         </div>
       </header>
 
