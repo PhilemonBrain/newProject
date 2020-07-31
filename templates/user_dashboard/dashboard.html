@@ -99,15 +99,15 @@
 
               <section id="container">
                 <article class="dropBox active-row">
-                  {% if mylist %}
+                  
                   <!-- Single box -->
-                  {% for mylist in mylists %}
+                  {% for context in object_list %}
                   <div class="dragBox active-box">
                     <div class="api__box">
                       <div class="api__box__shadow">
                         <div class="api__box__inner">
                           <div class="api__box__heading">
-                              <h5>{{ mylist.title }}</h5>  
+                              <h5>{{ context.title }}</h5>  
                               <!-- toggle -->
                               <div class="pretty p-switch p-fill">
                                 <input type="checkbox" />
@@ -117,11 +117,11 @@
                               </div>  
                           </div>
                           <div class="api__box__text">
-                            <small>{{ mylist.description }}</small>
+                            <small>{{ context.description }}</small>
                           </div>
                           <div class="api__box__stats">
                             <p>Stats <br>
-                              <span>{{ mylist.stats }}</span>
+                              <span>{{ context.stats }}</span>
                             </p>
                           </div>
                           <div class="api__box__buttons">
@@ -143,12 +143,6 @@
                     </div>
                   </div> <!-- Single box end -->
                   {% endfor %}
-
-                  {% else %}
-                  <div>
-                    No active api
-                  </div>
-                  {% endif %}
                 </article>
 
                 <div class="search-box">
@@ -166,15 +160,11 @@
                 <article class="dropBox inactive-row">
                   
                   <!-- Single box -->
-                  {% for all_api in all_apis %}
                   <div class="dragBox inactive-box">
                     <div class="api__box">
                       <div class="api__box__shadow">
                         <div class="api__box__inner">
                           <div class="api__box__heading">
-<<<<<<< HEAD
-                            <h5>{{ all_api.title }}</h5>
-=======
                             <h5>User API</h5>
                             <!-- toggle -->
                             <div class="pretty p-switch p-fill">
@@ -302,7 +292,6 @@
                         <div class="api__box__inner">
                           <div class="api__box__heading">
                             <h5>Receipt API</h5>
->>>>>>> 37d1f2e5609e3dfa9f5b34aee294cc0ff53440fb
                             <!-- toggle -->
                             <div class="pretty p-switch p-fill">
                               <input type="checkbox" />
@@ -312,7 +301,7 @@
                             </div>
                           </div>
                           <div class="api__box__text">
-                            <small>{{ all_api.description }}</small>
+                            <small>For business</small>
                           </div>
                           <div class="api__box__stats">
                             <p>Stats <br>
@@ -320,11 +309,7 @@
                             </p>
                           </div>
                           <div class="api__box__buttons">
-<<<<<<< HEAD
-                            <a href="{% url 'dashboard' %}"><button class="secondary-btn">+ Add API</button></a>
-=======
                             <a href="{% url 'dashboard:configure_api' %}"><button class="secondary-btn">+ Add API</button></a>
->>>>>>> 37d1f2e5609e3dfa9f5b34aee294cc0ff53440fb
                             <!-- <input type="radio" name="" id=""> -->
                             <!-- success -->
                             <div class="prindex.html pretty p-default p-round p-toggle">
@@ -341,7 +326,7 @@
                       </div>
                     </div>
                   </div> <!-- Single box end -->
-                  {% endfor %}
+
                 </article>
                 
               </section>
