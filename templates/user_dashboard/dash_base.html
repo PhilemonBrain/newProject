@@ -54,9 +54,39 @@
               </div> -->
 
             </li>
-            <button class="add-new"><span>+</span>
+            <button class="add-new" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addApiModal">
+              <span>+</span>
               <a href="#">New project</a>
             </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="addApiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Project</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button> -->
+                  </div>
+                  <div class="modal-body">
+
+                    <div class="form-group">
+                      <label for="project name"></label>
+                      <input type="text"
+                        class="form-control" name="project name" id="" aria-describedby="helpId" placeholder="Enter project name">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Add Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal end -->
           </ul>
         </div>
         <div class="sidebar__section__content">

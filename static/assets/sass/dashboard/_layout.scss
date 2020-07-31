@@ -62,6 +62,24 @@
 
       } 
 
+      #addApiModal > div > div {
+        div.modal-body {
+          div > input {
+            &:focus {
+              box-shadow: none;
+              border-color: lighten($color: $theme-color, $amount: 10);
+            }
+          }
+        } 
+
+        div.modal-footer {
+          button {
+            background-color: #5E5E66;
+            color: $secondary-color;
+          }
+        }
+      } 
+
       &__header{
         padding: 40px 0px 20px 0px;
         overflow: hidden;
