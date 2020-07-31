@@ -5,7 +5,7 @@ from accounts.models import User
 class ApiList(models.Model):
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    stats = models.CharField(max_length=255, default='3hrs')
+    stats = models.CharField(max_length=255, default='3req/hr')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
 
