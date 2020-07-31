@@ -30,8 +30,7 @@
                     margin-left: 20px;
                     p{
                         color: #5E5E66;
-                        font-size: 20px;
-                        font-family: Gilroy ☞;
+                        font-size: 16px;
                     }
                     h1{
                         font-size: 36px;
@@ -48,8 +47,7 @@
                     P{
                         margin-bottom: 0px;
                         color: #5E5E66;
-                        font-size: 18px;
-                        font-family: Gilroy ☞;
+                        font-size: 16px;
                     }
                 }
                 &__rating{
@@ -60,8 +58,7 @@
                     P{
                         margin-bottom: 0px;
                         color: #5E5E66;
-                        font-size: 18px;
-                        font-family: Gilroy ☞;
+                        font-size: 16px;
                     }
                     h4 i{
                         margin-right: 3px;
@@ -85,8 +82,7 @@
                         cursor: pointer;
                         padding:20px 0px;
                         color: #5E5E66;
-                        font-size: 20px;
-                        font-family: Gilroy ☞;
+                        font-size: 16px;
                         &:hover{
                             border-bottom: 4px solid #000000;
                         }
@@ -99,8 +95,7 @@
                     float: right;
                     a{
                         color: #121215;
-                        font-family: Gilroy ☞;
-                        font-size: 20px;
+                        font-size: 16px;
                         cursor: pointer;
                         &:hover{
                             color: $theme-color;
@@ -118,10 +113,12 @@
     #auth{
         .setup_comment{
             &__navbar{
+                padding-left: 15px;
                 width: 960px;
             }
             &__navlink{
                 &__container{
+                    padding-left: 15px;
                     width: 960px;
                 }
             }
@@ -132,10 +129,12 @@
     #auth{
         .setup_comment{
             &__navbar{
+                padding-left: 15px;
                 width: 720px;
             }
             &__navlink{
                 &__container{
+                    padding-left: 15px;
                     width: 720px;
                 }
             }
@@ -210,9 +209,6 @@
                     height: 40px;
                 }
                 &__title{
-                        p{
-                            font-size: 17px;
-                        }
                         h1{
                             font-size: 25px;
                         }

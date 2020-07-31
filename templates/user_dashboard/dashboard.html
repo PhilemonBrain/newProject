@@ -104,7 +104,7 @@
                             </p>
                           </div>
                           <div class="api__box__buttons">
-                            <a href="{% url 'dashboard:configure_api' %}"><button class="secondary-btn">+ Add API</button></a>
+                            <a href="" class="add_api" id="add_to_active"><button class="secondary-btn">+ Add API</button></a>
                             <!-- <input type="radio" name="" id=""> -->
                             <!-- success -->
                             <div class="prindex.html pretty p-default p-round p-toggle">
@@ -131,5 +131,25 @@
           </div>
         </div>
     </div>
+<script type="text/javascript">
+$('.add_api').click(function() {
+var id;
+id = $(this).attr("add_to_active");
+$.ajax(
+  {
+    type = 'POST',
+    url = 'active_api',
+    data: {
+      all_api_id : id
+    },
+    success: function(data) {
+
+    }
+  }
+)
+})
+
+
+</script>
 
 {% endblock %}
