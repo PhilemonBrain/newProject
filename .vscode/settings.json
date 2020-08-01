@@ -7,5 +7,5 @@
       "savePath": "/static/assets/css"
     }
   ],
-  "python.pythonPath": "microapi\\Scripts\\python.exe"
+  "python.pythonPath": "phil\\Scripts\\python.exe"
 }
