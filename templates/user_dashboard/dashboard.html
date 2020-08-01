@@ -32,31 +32,35 @@
                   
                   
                   <!-- Single box -->
-                  {% for context in object_list %}
+                  {% for obj in all_apis %}
+
+                  {% if obj in request.user.api_list.all %}
                   <div class="dragBox active-box">
                     <div class="api__box">
                       <div class="api__box__shadow">
                         <div class="api__box__inner">
                           <div class="api__box__heading">
-                              <h5>{{ context.title }}</h5>  
+                              <h5>{{ obj.title }}</h5>  
                               <!-- toggle -->
                               <div class="pretty p-switch p-fill">
                                 <input type="checkbox" />
                                 <div class="state p-success">
                                     <label></label>
                                 </div>
-                              </div>  
+                              </div>
+                              
                           </div>
                           <div class="api__box__text">
-                            <small>{{ context.description }}</small>
+                            <small>{{ obj.description }}</small>
                           </div>
                           <div class="api__box__stats">
                             <p>Stats <br>
-                              <span>{{ context.stats }}</span>
+                              <span>{{ obj.stats }}</span>
                             </p>
                           </div>
                           <div class="api__box__buttons">
                             <a href="{% url 'dashboard:configure_api' %}"><button class="primary-btn">Configure</button></a>
+                            
                             <!-- <input type="radio" name="" id=""> -->
                             <!-- success -->
                             <div class="prindex.html pretty p-default p-round p-toggle">
@@ -69,10 +73,15 @@
                               </div>
                             </div>
                           </div>
+                          <div>
+                            <a href="{% url 'dashboard:rmv_api' obj.id %}"><button>- Remove</button></a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div> <!-- Single box end -->
+                  {% endif %}
+
                   {% endfor %}
                 </article>
 
@@ -92,6 +101,7 @@
                   
                   <!-- Single box -->
                   {% for all_api in all_apis %}
+                  {% if all_api not in request.user.api_list.all %}
                   <div class="dragBox inactive-box">
                     <div class="api__box">
                       <div class="api__box__shadow">
@@ -115,7 +125,7 @@
                             </p>
                           </div>
                           <div class="api__box__buttons">
-                            <a href="" class="add_api" id="add_to_active"><button class="secondary-btn">+ Add API</button></a>
+                            <a href="{% url 'dashboard:adding_api' all_api.id %}"><button class="secondary-btn">+ Add API</button></a>
                             <!-- <input type="radio" name="" id=""> -->
                             <!-- success -->
                             <div class="prindex.html pretty p-default p-round p-toggle">
@@ -132,6 +142,7 @@
                       </div>
                     </div>
                   </div> <!-- Single box end -->
+                  {% endif %}
                   {% endfor %}
                 </article>
                 
