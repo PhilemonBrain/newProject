@@ -9,7 +9,8 @@ from homepage.views import index
 @login_required(login_url='/accounts/signin')
 def api_list(request, id):
     user = request.user
-    project = Project.objects.filter(user_id=user.id).filter(name='project1').first()
+    project = Project.objects.get(id=id)
+    # project = Project.objects.filter(user_id=user.id).filter(name='project1').first()
     print(project)
     active_api = ActiveApiList.objects.filter(project=project)
     print(active_api)
@@ -59,11 +60,13 @@ def addProject(request):
     project = Project.objects.filter(user_id=user.id).filter(name=project_name) #user.id or user.user_id??
     print(project)
     if not project:
-        Project.objects.create(
+        proj = Project.objects.create(
             name = project_name,
             user_id = user
             # token = token
         )
+        # proj.save()
+        # proj.id
         print("done creating")
         return redirect('/dashboard')
     else:

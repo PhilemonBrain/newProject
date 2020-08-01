@@ -24,6 +24,9 @@ def signin(request):
         print(user)
         if user is not None:
             auth.login(request, user)
+            # name = user.last_proj       #the actual name of the proj
+            # proj = Project.objects.filter(user_id = user.id).filter(name=name).first()
+            # proj.id
             return redirect("dashboard:dashboard")
         else:
             messages.info(request, 'Invalid credentials')
