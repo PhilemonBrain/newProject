@@ -5,6 +5,7 @@ from accounts.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from homepage.views import index
+import uuid
 
 @login_required(login_url='/accounts/signin')
 def api_list(request, id):
@@ -54,23 +55,26 @@ def settings(request):
 
 
 @login_required(login_url='/accounts/signin')
-def addProject(request, id):
-    project_name = "project6"
-    user = request.user
-    project = Project.objects.filter(user_id=user.id).filter(name=project_name) #user.id or user.user_id??
-    print(project)
-    if not project:
-        proj = Project.objects.create(
-            name = project_name,
-            user_id = user
-            # token = token
-        )
-        proj.save()
-        projID = proj.id
-        print("done creating")
-        return redirect("dashboard:dashboard", id=(projID))
-    else:
-        return redirect('/dashboard')
+def addProject(request):
+    if request.method ==  "POST":
+
+        project_name = request.POST['project_name']
+        user = request.user
+        project = Project.objects.filter(user_id=user.id).filter(name=project_name) #user.id or user.user_id??
+        print(project)
+        if not project:
+            proj = Project.objects.create(
+                name = project_name,
+                user_id = user,
+                token = uuid.uuid4().hex
+            )
+            proj.save()
+            print(proj)
+            projID = proj.id
+            print("done creating")
+            return redirect("dashboard:dashboard", id=(projID))
+        else:
+            return redirect('/dashboard')
 
 
 

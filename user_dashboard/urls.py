@@ -12,6 +12,6 @@ urlpatterns = [
     path('configure_api/', views.configure_api, name='configure_api'),
     path('logout/', views.logout, name='logout'),
     path('settings/', views.settings, name='settings'),
-    # path('addProject/', views.addProject, name='addProject'),
-    re_path(r'^addProject/(?P<id>\d+)$', views.addProject, name='addProject'),
+    path('addProject/', views.addProject, name='addProject'),
+    # re_path(r'^addProject/(?P<id>\d+)$', views.addProject, name='addProject'),
 ]
