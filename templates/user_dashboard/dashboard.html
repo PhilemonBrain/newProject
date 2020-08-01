@@ -32,9 +32,9 @@
                   
                   
                   <!-- Single box -->
-                  {% for obj in all_apis %}
+                  {% for obj in active_api %}
 
-                  {% if obj in request.user.api_list.all %}
+                  <!-- {% if obj in request.user.api_list.all %} -->
                   <div class="dragBox active-box">
                     <div class="api__box">
                       <div class="api__box__shadow">
@@ -80,7 +80,7 @@
                       </div>
                     </div>
                   </div> <!-- Single box end -->
-                  {% endif %}
+                  <!-- {% endif %} -->
 
                   {% endfor %}
                 </article>

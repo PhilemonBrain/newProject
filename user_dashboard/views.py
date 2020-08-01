@@ -7,7 +7,7 @@ from django.contrib import auth
 from homepage.views import index
 
 @login_required(login_url='/accounts/signin')
-def api_list(request):
+def api_list(request, id):
     user = request.user
     project = Project.objects.filter(user_id=user.id).filter(name='project1').first()
     print(project)
@@ -54,7 +54,7 @@ def settings(request):
 
 @login_required(login_url='/accounts/signin')
 def addProject(request):
-    project_name = "project5"
+    project_name = "project6"
     user = request.user
     project = Project.objects.filter(user_id=user.id).filter(name=project_name) #user.id or user.user_id??
     print(project)
@@ -64,11 +64,10 @@ def addProject(request):
             user_id = user
             # token = token
         )
-        # context = {
-        #     'project':project_name,
-        # }
         print("done creating")
-        return HttpResponseRedirect(reverse('api_list'))
+        return redirect('/dashboard')
+    else:
+        return redirect('/dashboard')
 
 
 

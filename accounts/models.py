@@ -10,7 +10,7 @@ class User(AbstractUser):
     name = models.CharField(_("Name of User"), blank=True, max_length=255)
     user_id = models.CharField(_("Id sent from auth api"), max_length=255)
     is_company = models.BooleanField(default=False)
-    api_list = models.ManyToManyField(ApiList, related_name='apis', blank=True, symmetrical=False)
+    # api_list = models.ManyToManyField(ApiList, related_name='apis', blank=True, symmetrical=False)
 
     def __str__(self):
         return self.first_name 

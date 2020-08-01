@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 # from accounts.models import User
 
 #Models for all the API's in the database
@@ -15,7 +16,7 @@ class ApiList(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=255)
-    user_id = models.ForeignKey(User, related_name='projects', on_delete=models.CASCADE)
+    user_id = models.ForeignKey(get_user_model(), related_name='projects', on_delete=models.CASCADE)
     token = models.UUIDField(null=True)
 
     def __str__(self):
