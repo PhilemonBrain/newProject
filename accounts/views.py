@@ -8,6 +8,8 @@ from django.conf import settings
 import requests
 import json
 from .models import User
+from user_dashboard.models import Project
+import uuid
 
 
 HEADERS = {
@@ -24,10 +26,13 @@ def signin(request):
         print(user)
         if user is not None:
             auth.login(request, user)
-            # name = user.last_proj       #the actual name of the proj
-            # proj = Project.objects.filter(user_id = user.id).filter(name=name).first()
-            # proj.id
-            return redirect("dashboard:dashboard")
+            print(user)
+            # name = user.last_project #this should replace line 30 after the column has been added to db
+            name = "Default Project"      #the actual name of the last proj the user was on before logout
+            proj = Project.objects.filter(user_id=user).filter(name=name).first()
+            print(proj)
+            projID = proj.id
+            return redirect("dashboard:dashboard", id=(projID))
         else:
             messages.info(request, 'Invalid credentials')
             return redirect("accounts:signin")
@@ -76,6 +81,8 @@ def signup(request):
                     user.user_id = response['data']['id']
                     user.is_active = False
                     user.save()
+                    project = Project.objects.create(name="Default Project", user_id=user, token=uuid.uuid4().hex)
+                    project.save()
                     msg = response['message']
                     messages.info(request, f'{msg}')
                     return redirect("accounts:signin")
@@ -120,7 +127,7 @@ def logout(request):
     response = response.content.decode("utf8")
     response = json.loads(response)
     if response["success"] == True:
-        auth.logout(request)        
+        auth.logout(request)
         return redirect("accounts:signin")
     else:
         messages.error(request, "Something went wrong, try again")

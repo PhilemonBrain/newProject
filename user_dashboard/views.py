@@ -54,7 +54,7 @@ def settings(request):
 
 
 @login_required(login_url='/accounts/signin')
-def addProject(request):
+def addProject(request, id):
     project_name = "project6"
     user = request.user
     project = Project.objects.filter(user_id=user.id).filter(name=project_name) #user.id or user.user_id??
@@ -65,10 +65,10 @@ def addProject(request):
             user_id = user
             # token = token
         )
-        # proj.save()
-        # proj.id
+        proj.save()
+        projID = proj.id
         print("done creating")
-        return redirect('/dashboard')
+        return redirect("dashboard:dashboard", id=(projID))
     else:
         return redirect('/dashboard')
 
