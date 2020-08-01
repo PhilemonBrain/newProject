@@ -24,7 +24,7 @@
     <!-- dashboard side bar -->
     <div class="sidebar">
       <div class="sidebar__logo">
-        <a href="{% url 'index' %}"><img src="{% static 'img/logo-alt.svg' %}" alt=""></a>
+        <a href="/dashboard"><img src="{% static 'img/logo-alt.svg' %}" alt=""></a>
       </div>
 
       <div class="sidebar__section">
@@ -73,18 +73,27 @@
                   </div>
                   <div class="modal-body">
 
+                    <form action="">
+
+                      
                     <div class="form-group">
                       <label for="project name"></label>
                       <input type="text"
                         class="form-control" name="project name" id="" aria-describedby="helpId" placeholder="Enter project name">
-                      <small id="helpId" class="form-text text-muted"></small>
+                      <small id="helpId" class="form-text text-muted" style="margin-bottom: 15px;"></small>
+
+                      <a href="#"><button type="submit" class="btn btn-primary">Add Project</button></a>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
 
+                    </form>
+
+
                   </div>
-                  <div class="modal-footer">
+                  <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button href="{% url 'dashboard:addProject' %}" type="button" class="btn btn-primary">Add Project</button>
-                  </div>
+                    <button type="button" class="btn btn-primary">Add Project</button>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -145,9 +154,12 @@
                   </button>
                 </div>
                 <div class="modal-body">
-
                   <div class="notification-content">
-
+                    <div class="empty-notifications">
+                      <span class="material-icons">notifications_paused</span>
+                      <h3>Nothing to see here</h3>
+                      <p>You do not have any new notifications. Check back later when you have some activity</p>
+                    </div>
                   </div>
 
                 </div>
@@ -178,6 +190,7 @@
 <script src="{% static 'js/dashboard_sidebar.js' %}"></script>
 <script src="{% static 'js/dashboard.js' %}"></script>
 <script src="{% static 'js/configure_api.js' %}"></script>
+<script src="{% static 'js/acct-settings.js' %}"></script>
 </body>
 
 </html>
