@@ -253,6 +253,20 @@
             button.close:focus {
               outline: none;
             }
+
+            .notification-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              text-align: center;
+              color: rgb(75, 75, 75);
+
+              span {
+                font-size: 100px;
+              }
+            }
           }
         }
 
