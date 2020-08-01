@@ -66,8 +66,10 @@ header {
     justify-content: flex-end;
     align-items: center;
 
-    a {
+    a { text-decoration: none !important;
       margin-left: 3%;
+      color:black;
+
     }
   }
 
