@@ -74,7 +74,6 @@ document.querySelector('body').addEventListener('mousemove', () => {
   let activeApiBox = document.querySelector('#container .active-row');
   let apiPresent = document.querySelector('#container .active-row .dragBox');
 
-  let content
 
   if (activeApiBox && !apiPresent) {
 
