@@ -31,21 +31,23 @@
         <div class="sidebar__section__header">
           <h5>Projects <i class="fas fa-angle-up"></i></h5>
           <ul class="sidebar__section__header__list">
-            <li>
-              <a href="#">Acme Project</a>
-              <!-- <div class="pretty p-icon">
-                <input type="checkbox" />
-                <div class="state">
-                  <i class="icon material-icons">done</i>
-                  <label><span class="spacer"></span>Acme Project's</label>
-                </div>
-              </div> -->
-            </li>
+            {% for project in user.projects.all %}
+              <li>
+                <a href="{% url 'dashboard:addProject' %}">{{ project.name }}</a>
+                <!-- <div class="pretty p-icon">
+                  <input type="checkbox" />
+                  <div class="state">
+                    <i class="icon material-icons">done</i>
+                    <label><span class="spacer"></span>Acme Project's</label>
+                  </div>
+                </div> -->
+              </li>
+            {% endfor %}
 
-            <li>
+            <!-- <li>
               <a href="#" class="inactive">Sentry's Prrojects</a>
 
-              <!-- <div class="pretty p-icon">
+             <div class="pretty p-icon">
                 <input type="checkbox" />
                 <div class="state">
                   <i class="icon material-icons">done</i>
@@ -81,7 +83,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Add Project</button>
+                    <button href="{% url 'dashboard:addProject' %}" type="button" class="btn btn-primary">Add Project</button>
                   </div>
                 </div>
               </div>
